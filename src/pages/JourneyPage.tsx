@@ -332,28 +332,38 @@ const JourneyPage: React.FC = () => {
             transition={{ duration: 0.7 }}
             className="relative bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-hidden"
           >
-            <div className="aspect-w-16 aspect-h-9">
+            <div className="w-full" style={{ height: '300px', position: 'relative' }}>
               {/* World map with location markers would go here */}
-              <div className="bg-blue-50 rounded-lg w-full h-[400px] flex items-center justify-center">
+              <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.839156725593!2d96.12413437412701!3d16.784676019890238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb09e45dc9c1%3A0xb4d32694065909b3!2sShwe%20Zabu%20River%20View%20Condo!5e0!3m2!1sen!2smm!4v1748331388203!5m2!1sen!2smm"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              {/* <div className="bg-blue-50 rounded-lg w-full h-[400px] flex items-center justify-center">
                 <p className="text-gray-500">Interactive World Map with Office Locations</p>
-              </div>
+              </div> */}
             </div>
             
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { region: 'North America', offices: ['New York', 'San Francisco', 'Toronto'] },
-                { region: 'Europe', offices: ['London', 'Berlin', 'Paris'] },
-                { region: 'Asia Pacific', offices: ['Singapore', 'Tokyo', 'Sydney'] }
+                { region: 'Yangon (Headquarter Office)', offices: ['Tower A, Room 304, 4th floor, Shwe Zabu River View Complex, Strand Road, Ahlone Township, Yangon']},
+                { region: 'Naypyidaw (Branch Office)', offices: ['No: 6/215, Pan Khinn road, Ywar Kauk ward,Pyinmana Township, Naypyidaw'], },
+                { region: 'Mandalay (Branch Office)', offices: ['No: 135, Building A-03, (36-B), Pearl Ngwe Yaung ward, 81 street (between of 20th & 21st street), Aung Myay Thar Zan Township, Mandalay'],  }
               ].map((region, index) => (
                 <div key={index} className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="text-lg font-semibold text-gray-800 mb-3">{region.region}</h3>
                   <ul className="space-y-2">
                     {region.offices.map((office, i) => (
-                      <li key={i} className="flex items-center text-gray-600">
-                        <MapPin className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                      <li key={i} className="flex items-start text-gray-600">
+                        <MapPin className="w-7 pt-2 h-7 text-blue-500 mr-2 flex-shrink-0" />
                         {office}
                       </li>
                     ))}
+
+                     
                   </ul>
                 </div>
               ))}

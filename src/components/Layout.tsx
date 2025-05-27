@@ -37,7 +37,7 @@ const Layout: React.FC = () => {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <Logo />
-            <span className="ml-2 text-lg font-semibold text-gray-800">OneCloud</span>
+            {/* <span className="ml-2 text-lg font-semibold text-gray-800">OneCloud</span> */}
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">

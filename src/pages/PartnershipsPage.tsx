@@ -3,6 +3,61 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Award, Layers, Shield } from 'lucide-react';
 
+import A10 from '../img/partners/A10.png';
+import APC from '../img/partners/APC-copy.png';
+import Check_point from '../img/partners/Check-Point-copy.png';
+import Cisco_Gold from '../img/partners/Cisco-Gold-150x150.png';
+import Dell_Platinum from '../img/partners/Dell-Platinum-150x150.png';
+import f5 from '../img/partners/f5-copy.png';
+import Fortinet from '../img/partners/Fortinet-copy.png';
+import Hewlett_Packard from '../img/partners/Hewlett-Packard-copy.png';
+import imperva from '../img/partners/imperva-copy.png';
+import Infoblox from '../img/partners/Infoblox-copy.png';
+import Juniper from '../img/partners/Juniper-copy.png';
+import Microsoft from '../img/partners/Microsoft-copy.png';
+import paloalto from '../img/partners/paloalto-150x150.png';
+import redhat from '../img/partners/redhat-copy.png';
+import sendQuick from '../img/partners/sendQuick-copy.png';
+import Sophos from '../img/partners/Sophos-copy.png';
+import splunk from '../img/partners/splunk-copy.png';
+import Symantec from '../img/partners/Symantec-copy.png';
+import Trendmicro from '../img/partners/Trendmicro-copy.png';
+import Veritas from '../img/partners/Veritas-copy.png';
+import VMware from '../img/partners/VMware-Advanced-150x150.png';
+import zimbra from '../img/partners/zimbra-copy.png';
+
+const logoMap = {
+  'Tech Partner 1': A10,
+  'Tech Partner 2': APC,
+  'Tech Partner 3': Check_point,
+  'Tech Partner 4': Cisco_Gold,
+  'Tech Partner 5': Dell_Platinum,
+  'Tech Partner 6': f5,
+  'Tech Partner 7': Fortinet,
+  'Tech Partner 8': Hewlett_Packard,
+  'Tech Partner 9': imperva,
+  'Tech Partner 10': Infoblox,
+  'Tech Partner 11': Juniper,
+  'Tech Partner 12':  Microsoft,
+  'Tech Partner 13': paloalto ,
+  'Tech Partner 14': sendQuick,
+  'Tech Partner 15': Sophos,
+  'Tech Partner 16': splunk,
+  'Tech Partner 17': Symantec,
+  'Tech Partner 18': Trendmicro,
+  'Tech Partner 19':  VMware,
+  'Tech Partner 20': zimbra,
+  'Tech Partner 21': redhat,
+  'Tech Partner 22': Veritas,
+};
+
+const name = [
+  'A10', 'APC', 'Check-Point', 'Cisco-Gold', 'Dell-Platinum',
+  'f5', 'Fortinet', 'Hewlett-Packard', 'Imperva', 'Infoblox',
+  'Juniper', 'Microsoft', 'Paloalto',  'SendQuick',
+  'Sophos', 'Splunk', 'Symantec', 'Trendmicro','VMware-Advanced',  'zimbra','Veritas',
+  
+];
 const partnershipLevels = [
   {
     title: 'Gold Partners',
@@ -33,10 +88,10 @@ const generatePartners = () => {
     
     partners.push({
       id: i,
-      name: `Tech Partner ${i}`,
+      name: name[i-1],
       category,
       level,
-      logo: `https://via.placeholder.com/150?text=Partner${i}`,
+      logo: logoMap[`Tech Partner ${i}`] || `https://via.placeholder.com/150?text=Partner${i}`,
       description: `A leading provider of ${category.toLowerCase()} solutions for enterprise businesses.`
     });
   }
@@ -313,9 +368,9 @@ const PartnershipsPage: React.FC = () => {
                 className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="h-40 bg-white flex items-center justify-center p-4">
-                  <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
-                    <span className="text-gray-500 font-semibold">Partner {partner.id}</span>
-                  </div>
+                <div className="w-30 h-30  flex items-center justify-center overflow-hidden">
+                  <img src={partner.logo} alt={`${partner.name} logo`} className="w-full h-full object-contain" />
+                </div>
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">

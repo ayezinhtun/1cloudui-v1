@@ -2,6 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
+import heineken from '../img/customers/Heineken-150x150.png';
+import moee from '../img/customers/MOEE-150x150.png';
+import mandalay_hill_resort from '../img/customers/Mandalay-Hill-Resort-150x150.png';
+import mottama from '../img/customers/Mottama-150x150.png';
+import mpt from '../img/customers/MPT-150x150.png';
 import { 
   Server, 
   Cloud, 
@@ -17,24 +22,55 @@ import {
 const servicesData = [
   {
     icon: <Server className="w-6 h-6 text-blue-600" />,
-    title: 'System Integration',
-    description: 'Connect your disparate systems and applications for seamless data flow.'
+    title: 'IT Infrastructure and System Integration Services',
+    description: [
+      "Server Consolidation/ Virtualization",
+      "High Availability/ Redundancy Solutions ",
+      "Fault Tolerant Solution & Hyper-Converged Infrastructure ",
+      "Wireless Infrastructure & BYOD Solutions ",
+      "Infrastructure Upgrade & Migration  ",
+      "IT Infrastructure Setup for New Offices & Relocation ",
+      "DC/DR Core Network Solutions",
+      "WAN infrastructure",
+    ]
   },
   {
     icon: <Cloud className="w-6 h-6 text-blue-600" />,
-    title: 'Cloud Solutions',
-    description: 'Migrate and optimize your infrastructure with our cloud expertise.'
+    title: 'Cloud and Managed Services',
+    description: [
+      "Private and Public Solutions",
+      "Hybrid Solutions",
+      "Unified Communications ",
+      "Telepresence and Teleconference Solutions ",
+      "VOIP Solutions ",
+    ],
   },
   {
     icon: <Shield className="w-6 h-6 text-blue-600" />,
-    title: 'Cybersecurity',
-    description: 'Protect your critical assets with comprehensive security solutions.'
+    title: 'Data Center ​Services​',
+    description: [
+      "Active-Active DC/DR Solutions",
+      "Storage & Backup Solutions",
+      "Project Management ",
+      "Delivering Cost Effective & Quality Solutions ",
+      "Software Defined Networking (SDN) and Virtualization",
+    ],
   },
   {
     icon: <Database className="w-6 h-6 text-blue-600" />,
-    title: 'Data Management',
-    description: 'Organize, store, and analyze your data for actionable insights.'
-  }
+    title: 'Security and Compliance Services',
+    description: [
+      "Advanced Persistent Threat Protection ",
+      "Compliance Management ",
+      "Cybersecurity & Risk Management",
+      "Enabling & Optimizing SSL/TLS ",
+      "Web Application Firewalls ",
+      "DDoS Protection ",
+      "Data Center and Enterprise Security",
+      "PCI Compliant Solutions",
+      "Next Generation Firewalls ",
+      "Access Control and AAA ",
+    ],  }
 ];
 
 const statsData = [
@@ -42,6 +78,10 @@ const statsData = [
   { value: '100+', label: 'Projects Completed' },
   { value: '10+', label: 'Years Experience' },
   { value: '15+', label: 'Countries Served' }
+];
+
+const clientLogos = [
+  heineken,moee,mandalay_hill_resort,mottama,mpt,
 ];
 
 const HomePage: React.FC = () => {
@@ -88,7 +128,11 @@ const HomePage: React.FC = () => {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  {service.description.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+              </ul>
               </motion.div>
             ))}
           </div>
@@ -223,21 +267,21 @@ const HomePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex justify-center grayscale hover:grayscale-0 transition-all"
-              >
-                <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center">
-                  <span className="text-gray-500 font-semibold">Client {index + 1}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              {clientLogos.map((logo, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex justify-center hover:grayscale-0 transition-all"
+                >
+                  <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center">
+                    <img src={logo} alt={`Client ${index + 1}`} />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           
           <div className="text-center mt-12">
             <Link

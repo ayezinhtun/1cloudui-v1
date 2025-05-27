@@ -116,22 +116,20 @@ const AboutPage: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Founded in 2015, OneCloud began with a simple mission: to help businesses 
-                  connect their disparate systems and achieve greater efficiency. What started 
-                  as a small consulting firm has grown into a full-service system integration 
-                  company with clients across multiple industries.
+                            One Cloud Technology is a System Integrator and founded in 2015,
+                    providing all about IT Solutions, IP Network Designs and System
+                    Integration, building reliable Network Infrastructures, Data Management
+                    & Security & Compliance, Data Center Solutions, Virtualiztion Solutions,
+                    Cloud & Managed Services, Consultation Service.
                 </p>
                 <p>
-                  Our team of experts brings decades of combined experience in system integration, 
-                  cloud computing, and business process optimization. We've helped companies of all 
-                  sizes—from startups to Fortune 500 enterprises—transform their operations through 
-                  intelligent integration solutions.
+                          Make us your reliable vendor and have a greatest contribution from us.
+                  With our expertise and track record, you can be assured of receiving
+                  quality infrastructure and services. We are also committed to building
+                  lasting relationships and will go the extra miles in ensuring continuous
+                  support and upgrading for your network environment.
                 </p>
-                <p>
-                  Today, we're proud to be at the forefront of system integration technology, 
-                  constantly innovating to meet the evolving needs of our clients. Our commitment 
-                  to excellence and customer satisfaction drives everything we do.
-                </p>
+                
               </div>
             </motion.div>
             
@@ -177,9 +175,18 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-gray-800">Our Mission</h3>
               </div>
               <p className="text-gray-600">
-                To empower businesses through seamless system integration solutions that drive 
-                efficiency, innovation, and growth. We aim to be the bridge that connects disparate 
-                technologies, enabling our clients to focus on their core business objectives.
+                Helping customers to accelerate the business ambitions by
+                delivering innovative IT solutions and consistent quality
+                services at all time.
+                <br /><br />
+                Striving to exceed customers expectations to become selected vendor,
+                then to become preferred vendor.
+                <br /><br />
+                Continually communicate with, and learn from our Customers, in order
+                to improve our products and services.
+                <br /><br />
+                Being the partner of choice for a leading system integrator, build
+                and maintain the most innovative, reliable and cost-effective solution.
               </p>
             </motion.div>
             
@@ -197,10 +204,10 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-gray-800">Our Vision</h3>
               </div>
               <p className="text-gray-600">
-                To be the global leader in system integration, recognized for our innovation, 
-                expertise, and commitment to client success. We envision a world where businesses 
-                can seamlessly connect their systems, data, and processes to achieve unprecedented 
-                levels of efficiency and insight.
+              To achieve year to year sustainable growth through wide
+                portfolio of innovation, customer focused products and services
+                efficiently delivered by a professional and resourced team
+                through active communications.
               </p>
             </motion.div>
           </div>
