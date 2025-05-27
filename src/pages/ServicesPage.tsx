@@ -17,8 +17,17 @@ import {
 const services = [
   {
     id: 'system-integration',
-    title: 'System Integration',
-    description: 'Connect your disparate systems, applications, and data sources to create a unified ecosystem.',
+    title: 'IT Infrastructure and System Integration Services',
+    description: [
+      "Server Consolidation/ Virtualization",
+      "High Availability/ Redundancy Solutions ",
+      "Fault Tolerant Solution & Hyper-Converged Infrastructure ",
+      "Wireless Infrastructure & BYOD Solutions ",
+      "Infrastructure Upgrade & Migration  ",
+      "IT Infrastructure Setup for New Offices & Relocation ",
+      "DC/DR Core Network Solutions",
+      "WAN infrastructure",
+    ],
     icon: <Server className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Eliminate data silos and duplicate information',
@@ -35,8 +44,14 @@ const services = [
   },
   {
     id: 'cloud-solutions',
-    title: 'Cloud Solutions',
-    description: 'Leverage the power of cloud computing to enhance flexibility, scalability, and performance.',
+    title: 'Cloud and Managed Services',
+    description: [
+      "Private and Public Solutions",
+      "Hybrid Solutions",
+      "Unified Communications ",
+      "Telepresence and Teleconference Solutions ",
+      "VOIP Solutions ",
+    ],
     icon: <Cloud className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Reduce IT infrastructure costs',
@@ -53,9 +68,15 @@ const services = [
   },
   {
     id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Protect your critical systems and data with comprehensive security solutions.',
-    icon: <Shield className="w-12 h-12 text-blue-600" />,
+    title: 'Data Center ​Services',
+    description: [
+      "Active-Active DC/DR Solutions",
+      "Storage & Backup Solutions",
+      "Project Management ",
+      "Delivering Cost Effective & Quality Solutions ",
+      "Software Defined Networking (SDN) and Virtualization",
+    ],
+    icon: <Database className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Safeguard sensitive business and customer data',
       'Maintain regulatory compliance',
@@ -71,9 +92,20 @@ const services = [
   },
   {
     id: 'data-management',
-    title: 'Data Management',
-    description: 'Optimize how your organization stores, organizes, and utilizes data for maximum value.',
-    icon: <Database className="w-12 h-12 text-blue-600" />,
+    title: 'Security and Compliance Services',
+    description: [
+      "Advanced Persistent Threat Protection ",
+      "Compliance Management ",
+      "Cybersecurity & Risk Management",
+      "Enabling & Optimizing SSL/TLS ",
+      "Web Application Firewalls ",
+      "DDoS Protection ",
+      "Data Center and Enterprise Security",
+      "PCI Compliant Solutions",
+      "Next Generation Firewalls ",
+      "Access Control and AAA ",
+    ],
+    icon: <Shield className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Make better business decisions with reliable data',
       'Improve data quality and consistency',
@@ -89,8 +121,13 @@ const services = [
   },
   {
     id: 'ai-solutions',
-    title: 'AI & Automation',
-    description: 'Implement artificial intelligence and automation to transform your business processes.',
+    title: 'Consultation ​Services​',
+    description: [
+      "Gain external and objective advice with professional recommendations",
+      "Hire extra hands for one-time projects where the hiring of permanent employees is not necessary.",
+      "Acquire professional help in project scoping and planning.",
+      "Convert your business requirements into technical language",
+    ],
     icon: <Bot className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Automate repetitive tasks and workflows',
@@ -107,8 +144,8 @@ const services = [
   },
   {
     id: 'managed-services',
-    title: 'Managed IT Services',
-    description: 'Let our experts handle your IT operations so you can focus on your core business.',
+    title: 'Technical Transfer Services',
+    description: 'Knowledge Sharing and Technical Transfer Services',
     icon: <Monitor className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Reduce operational IT costs',
@@ -209,7 +246,7 @@ const ServicesPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-all border-2 ${
+                className={`bg-white rounded-lg p-8 flex flex-col h-full shadow-md hover:shadow-lg transition-all border-2 ${
                   selectedService === service.id 
                     ? 'border-blue-500' 
                     : 'border-gray-100 hover:border-blue-200'
@@ -220,7 +257,13 @@ const ServicesPage: React.FC = () => {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                {[service.description].flat().map((item, index) => (
+                  typeof item === 'string' ? (
+                    <p key={index} className="text-gray-600 mb-4">{item}</p>
+                  ) : null
+                ))}
+
+                <div className='mt-auto'>
                 <button 
                   className="text-blue-600 font-medium flex items-center hover:text-blue-700 transition-colors"
                   onClick={(e) => {
@@ -230,6 +273,8 @@ const ServicesPage: React.FC = () => {
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </button>
+                </div>
+               
               </motion.div>
             ))}
           </div>

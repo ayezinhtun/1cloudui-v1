@@ -131,7 +131,7 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-800 mb-1">Our Location</h3>
-                      <p className="text-gray-600">123 Integration Street, Tech City, TC 10001</p>
+                      <p className="text-gray-600">Tower A, Room 304, 4th floor, Shwe Zabu River View Complex, Strand Road, Ahlone Township, Yangon</p>
                     </div>
                   </div>
                   
@@ -141,7 +141,9 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-800 mb-1">Phone</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">(+95) 9 400 635 977</p>
+                      <p className="text-gray-600">(+95) 9 400 635 978</p>
+
                     </div>
                   </div>
                   
@@ -151,7 +153,9 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-800 mb-1">Email</h3>
-                      <p className="text-gray-600">info@onecloudsi.com</p>
+                      <p className="text-gray-600">sales@1cloudtechnology.com</p>
+                      <p className="text-gray-600">info@1cloudtechnology.com</p>
+
                     </div>
                   </div>
                   
@@ -213,7 +217,7 @@ const ContactPage: React.FC = () => {
                         name="name"
                         value={formState.name}
                         onChange={handleInputChange}
-                        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         required
                       />
                     </div>
@@ -228,7 +232,7 @@ const ContactPage: React.FC = () => {
                         name="email"
                         value={formState.email}
                         onChange={handleInputChange}
-                        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                         required
                       />
                     </div>
@@ -243,7 +247,7 @@ const ContactPage: React.FC = () => {
                         name="phone"
                         value={formState.phone}
                         onChange={handleInputChange}
-                        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                     
@@ -257,7 +261,7 @@ const ContactPage: React.FC = () => {
                         name="company"
                         value={formState.company}
                         onChange={handleInputChange}
-                        className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        className="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       />
                     </div>
                   </div>
@@ -271,7 +275,7 @@ const ContactPage: React.FC = () => {
                       name="service"
                       value={formState.service}
                       onChange={handleInputChange}
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                      className="block w-full p-3 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                     >
                       <option value="">Select a service</option>
                       <option value="System Integration">System Integration</option>
@@ -344,8 +348,14 @@ const ContactPage: React.FC = () => {
             className="bg-white rounded-lg overflow-hidden shadow-md"
           >
             <div className="h-[400px] bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Interactive Map Would Go Here</p>
-            </div>
+            <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.839156725593!2d96.12413437412701!3d16.784676019890238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb09e45dc9c1%3A0xb4d32694065909b3!2sShwe%20Zabu%20River%20View%20Condo!5e0!3m2!1sen!2smm!4v1748331388203!5m2!1sen!2smm"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>            </div>
           </motion.div>
         </div>
       </section>

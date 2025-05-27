@@ -128,11 +128,11 @@ const HomePage: React.FC = () => {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                {/* <ul className="list-disc list-inside text-gray-600 space-y-1">
                   {service.description.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
-              </ul>
+              </ul> */}
               </motion.div>
             ))}
           </div>
@@ -276,7 +276,7 @@ const HomePage: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex justify-center hover:grayscale-0 transition-all"
                 >
-                  <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center">
+                  <div className="w-24 h-24 rounded-full flex items-center justify-center">
                     <img src={logo} alt={`Client ${index + 1}`} />
                   </div>
                 </motion.div>

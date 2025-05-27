@@ -12,7 +12,79 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+import Bloomberg_data from '../img/customers/Bloomberg-Data-for-Health-Initiative-150x150.png';
+import Community_Partners from '../img/customers/Community-Partners-150x150.png';
+import GTL from '../img/customers/GTL-150x150.png';
+import GTMH from '../img/customers/GTMH-150x150.png';
+import Heineken from '../img/customers/Heineken-150x150.png';
+import Hotel_Max from '../img/customers/Hotel-Max-150x150.png';
+import IKBZ from '../img/customers/IKBZ-150x150.png';
+import im_net from '../img/customers/im-net-150x150.png';
+import Law from '../img/customers/Law-150x150.png';
+import Mandalay_City from '../img/customers/Mandalay-City-Development-150x150.png';
+import Mandalay_Hill from '../img/customers/Mandalay-Hill-Resort-150x150.png';
+import MCB from '../img/customers/MCB-150x150.png';
+import MCM from '../img/customers/MCM-150x150.png';
+import Ministry from '../img/customers/Ministry-of-Transport-150x150.png';
+import MOEE from '../img/customers/MOEE-150x150.png';
+import Mottama from '../img/customers/Mottama-150x150.png';
+import MPT from '../img/customers/MPT-150x150.png';
+import Myanmar from '../img/customers/Myanmar-150x150.png';
+import Myanmar_red from '../img/customers/Myanmar-Red-Cross-150x150.png';
+import N_Health from '../img/customers/N-Health-1-150x150.png';
+import Ooredoo from '../img/customers/Ooredoo-150x150.png';
+import Path from '../img/customers/Path-150x150.png';
+import Sakura from '../img/customers/Sakura-150x150.png';
+import state from '../img/customers/State-of-Qatar-150x150.png';
+import UMG from '../img/customers/UMG-150x150.png';
+import umg from '../img/customers/umg-college-150x150.png';
+import umtgi from '../img/customers/UMTGI-150x150.png';
+import wilmar from '../img/customers/wilmar-150x150.png';
+import yangon from '../img/customers/Yangon-150x150.png';
+
+const Customerlogo = {
+  'Tech Customer 1': Bloomberg_data,
+  'Tech Customer 2': Community_Partners,
+  'Tech Customer 3': GTL,
+  'Tech Customer 4': GTMH,
+  'Tech Customer 5': Heineken,
+  'Tech Customer 6': Hotel_Max,
+  'Tech Customer 7': IKBZ,
+  'Tech Customer 8': im_net,
+  'Tech Customer 9': Law,
+  'Tech Customer 10': Mandalay_City,
+  'Tech Customer 11': Mandalay_Hill,
+  'Tech Customer 12': MCB,
+  'Tech Customer 13':  MCM,
+  'Tech Customer 14': Ministry ,
+  'Tech Customer 15': MOEE,
+  'Tech Customer 16': Mottama,
+  'Tech Customer 17': MPT,
+  'Tech Customer 18': Myanmar,
+  'Tech Customer 19': Myanmar_red,
+  'Tech Customer 20':  N_Health,
+  'Tech Customer 21': Ooredoo,
+  'Tech Customer 22': Path,
+  'Tech Customer 23': Sakura,
+  'Tech Customer 24': state,
+  'Tech Customer 25': UMG,
+  'Tech Customer 26': umg,
+  'Tech Customer 27': umtgi,
+  'Tech Customer 28': wilmar,
+  'Tech Customer 29': yangon,
+};
+
+
+const name = [
+  'Bloomberg Data for Health Initiative', 'Community Partners', 'GTL', 'GTMG', 'Heineken', 'Hotel Max',
+  'IKBZ', 'im-net', 'LAW', 'Mandalay City Development', 'Mandalay Hill Resort',
+  'MCB', 'MCM', 'Ministry of transport',  'MOEE',
+  'Mottama', 'MPT', 'Myanmar', 'Myanmar Red Cross',  'N-Health','Ooredoo','Path' , 'Sakura', 'State of Qatar', 'UMG', 'UMG College', 'UMTGI', 'Wilmar', 'Yangon'
+  
+];
 // Generate sample customer data
+
+
 const generateCustomers = () => {
   const industries = ['Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Technology'];
   const customers = [];
@@ -21,9 +93,9 @@ const generateCustomers = () => {
     const industry = industries[Math.floor(Math.random() * industries.length)];
     customers.push({
       id: i,
-      name: `Customer ${i}`,
+      name: name[i-1],
       industry,
-      logo: `https://via.placeholder.com/150?text=Logo${i}`,
+      logo: Customerlogo[`Tech Customer ${i}`],
       description: `A leading ${industry.toLowerCase()} company that has transformed their operations with our integration solutions.`,
       solution: Math.random() > 0.5 ? 'System Integration' : 'Cloud Solutions',
       results: [
@@ -213,10 +285,19 @@ const CustomersPage: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="h-40 bg-gray-50 flex items-center justify-center p-4 border-b border-gray-200">
-                  <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
-                    <span className="text-gray-500 font-semibold">Logo {customer.id}</span>
+                <div className="h-40 flex items-center justify-center p-4 border-b border-gray-200">
+                  <div className="w-30 h-30 flex items-center justify-center overflow-hidden">
+                    {customer.logo ? (
+                      <img 
+                        src={customer.logo} 
+                        alt={`${customer.name} logo`} 
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <span className="text-gray-500 font-semibold">Logo {customer.id}</span>
+                    )}
                   </div>
+                  
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
