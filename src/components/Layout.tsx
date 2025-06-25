@@ -56,9 +56,18 @@ const Layout: React.FC = () => {
             <Link to="/services" className={`text-sm font-medium ${location.pathname === '/services' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
               Services
             </Link>
-            <Link to="/cloud" className={`text-sm font-medium ${location.pathname === '/cloud' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            {/* <Link to="/1cloudtechnolory.com" className={`text-sm font-medium ${location.pathname === '/cloud' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
               1Cloud NG
-            </Link>
+            </Link> */}
+
+          <a 
+            href="https://1cloudng.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            1Cloud NG
+          </a>
             <Link to="/customers" className={`text-sm font-medium ${location.pathname === '/customers' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
               Customers
             </Link>
