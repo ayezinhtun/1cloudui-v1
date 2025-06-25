@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               <span className="ml-2 text-lg font-semibold text-gray-800">OneCloud</span>
             </div>
             <p className="text-gray-600 mb-4">
-              Delivering innovative system integration solutions to businesses worldwide.
+              Transforming businesses through innovative cloud solutions and enterprise-grade IT services.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-500 hover:text-blue-600 transition-colors">
@@ -107,15 +107,23 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mt-1 mr-2 text-blue-600 flex-shrink-0" size={16} />
-                <span className="text-gray-600">123 Integration Street, Tech City, TC 10001</span>
+                <span className="text-gray-600">Tower A, Room 304, 4th floor, Shew Zabu River View Complex, Strand Road, Ahlone Township, Yangon</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 text-blue-600 flex-shrink-0" size={16} />
-                <span className="text-gray-600">+1 (555) 123-4567</span>
+                 <span className="text-gray-600">
+                    (+95) 9 400 635 977
+                  <br />
+                  (+95) 9 400 635 978
+                </span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 text-blue-600 flex-shrink-0" size={16} />
-                <span className="text-gray-600">info@onecloudsi.com</span>
+                  <span className="text-gray-600">
+                sales@1cloudtechnology.com
+                <br />
+                info@1cloudtechnology.com
+              </span>
               </li>
             </ul>
           </div>

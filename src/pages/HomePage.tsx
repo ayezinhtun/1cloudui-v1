@@ -16,13 +16,17 @@ import {
   Workflow, 
   Users, 
   Award,
-  CheckCircle
+  CheckCircle,
+  Layers,
+  Repeat,
+  CircuitBoard,
+  Wifi
 } from 'lucide-react';
 
 const servicesData = [
   {
-    icon: <Server className="w-6 h-6 text-blue-600" />,
-    title: 'IT Infrastructure and System Integration Services',
+    icon: <Layers className="w-6 h-6 text-blue-600" />,
+    title: 'Server Consolidation & Virtualization',
     description: [
       "Server Consolidation/ Virtualization",
       "High Availability/ Redundancy Solutions ",
@@ -35,8 +39,8 @@ const servicesData = [
     ]
   },
   {
-    icon: <Cloud className="w-6 h-6 text-blue-600" />,
-    title: 'Cloud and Managed Services',
+    icon: <Repeat className="w-6 h-6 text-blue-600" />,
+    title: 'High Availability & Redundancy Solutions',
     description: [
       "Private and Public Solutions",
       "Hybrid Solutions",
@@ -46,8 +50,8 @@ const servicesData = [
     ],
   },
   {
-    icon: <Shield className="w-6 h-6 text-blue-600" />,
-    title: 'Data Center ​Services​',
+    icon: <CircuitBoard className="w-6 h-6 text-blue-600" />,
+    title: 'Fault Tolerant Solution & Hyper-Converged Infreastructure​',
     description: [
       "Active-Active DC/DR Solutions",
       "Storage & Backup Solutions",
@@ -57,8 +61,8 @@ const servicesData = [
     ],
   },
   {
-    icon: <Database className="w-6 h-6 text-blue-600" />,
-    title: 'Security and Compliance Services',
+    icon: <Wifi className="w-6 h-6 text-blue-600" />,
+    title: 'Wireless Infrastructure & BYOD Solutions',
     description: [
       "Advanced Persistent Threat Protection ",
       "Compliance Management ",

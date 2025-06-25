@@ -11,24 +11,25 @@ import {
   Code,
   Workflow,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  Layers,
+  Repeat,
+  CircuitBoard,
+  Wifi,
+  Network,
+  BookOpen,
+  CloudCog,
+  Globe
 } from 'lucide-react';
 
 const services = [
   {
     id: 'system-integration',
-    title: 'IT Infrastructure and System Integration Services',
+    title: 'Server Consolidation & Virtualization',
     description: [
-      "Server Consolidation/ Virtualization",
-      "High Availability/ Redundancy Solutions ",
-      "Fault Tolerant Solution & Hyper-Converged Infrastructure ",
-      "Wireless Infrastructure & BYOD Solutions ",
-      "Infrastructure Upgrade & Migration  ",
-      "IT Infrastructure Setup for New Offices & Relocation ",
-      "DC/DR Core Network Solutions",
-      "WAN infrastructure",
+      "Consolidate server resources and implement virtualization techniques to improve performance, reduce physical hardware and enhance resoure management.",
     ],
-    icon: <Server className="w-12 h-12 text-blue-600" />,
+    icon: <Layers className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Eliminate data silos and duplicate information',
       'Automate data flow between systems',
@@ -44,15 +45,11 @@ const services = [
   },
   {
     id: 'cloud-solutions',
-    title: 'Cloud and Managed Services',
+    title: 'High Availability & Redundancy Solutions',
     description: [
-      "Private and Public Solutions",
-      "Hybrid Solutions",
-      "Unified Communications ",
-      "Telepresence and Teleconference Solutions ",
-      "VOIP Solutions ",
+      "Design and deploy solutions that ensure continuous availability of critical services, preventing downtime wieh high-availability and redundancy configurations.",
     ],
-    icon: <Cloud className="w-12 h-12 text-blue-600" />,
+    icon: <Repeat className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Reduce IT infrastructure costs',
       'Scale resources based on demand',
@@ -68,15 +65,11 @@ const services = [
   },
   {
     id: 'cybersecurity',
-    title: 'Data Center ​Services',
+    title: 'Fault Tolerant Solution & Hyper-Convered Infracture',
     description: [
-      "Active-Active DC/DR Solutions",
-      "Storage & Backup Solutions",
-      "Project Management ",
-      "Delivering Cost Effective & Quality Solutions ",
-      "Software Defined Networking (SDN) and Virtualization",
+      "Implement fault-tolerant systems and hyper-converged infrastructure to ensure operational resilience, combining compute, storage and network functions in a unified system.",
     ],
-    icon: <Database className="w-12 h-12 text-blue-600" />,
+    icon: <CircuitBoard className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Safeguard sensitive business and customer data',
       'Maintain regulatory compliance',
@@ -92,20 +85,11 @@ const services = [
   },
   {
     id: 'data-management',
-    title: 'Security and Compliance Services',
+    title: 'Wireless Infrastructure & BYOD Solutions',
     description: [
-      "Advanced Persistent Threat Protection ",
-      "Compliance Management ",
-      "Cybersecurity & Risk Management",
-      "Enabling & Optimizing SSL/TLS ",
-      "Web Application Firewalls ",
-      "DDoS Protection ",
-      "Data Center and Enterprise Security",
-      "PCI Compliant Solutions",
-      "Next Generation Firewalls ",
-      "Access Control and AAA ",
+      "Create a secure and efficient wireless network infrastructure to support Bring Your Own Device (BYOD) initiatives, ensuring connectivity and security for all devices.",
     ],
-    icon: <Shield className="w-12 h-12 text-blue-600" />,
+    icon: <Wifi className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Make better business decisions with reliable data',
       'Improve data quality and consistency',
@@ -121,14 +105,11 @@ const services = [
   },
   {
     id: 'ai-solutions',
-    title: 'Consultation ​Services​',
+    title: 'Infrastructure Upgrade & Migration​',
     description: [
-      "Gain external and objective advice with professional recommendations",
-      "Hire extra hands for one-time projects where the hiring of permanent employees is not necessary.",
-      "Acquire professional help in project scoping and planning.",
-      "Convert your business requirements into technical language",
+      'Upgrade legacy infrastructure to modern platforms and migrate systems seamlessly, ensuring minimal disruption while enhancing system performance and security.',
     ],
-    icon: <Bot className="w-12 h-12 text-blue-600" />,
+    icon: <Workflow className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Automate repetitive tasks and workflows',
       'Gain insights from predictive analytics',
@@ -144,9 +125,10 @@ const services = [
   },
   {
     id: 'managed-services',
-    title: 'Technical Transfer Services',
-    description: 'Knowledge Sharing and Technical Transfer Services',
-    icon: <Monitor className="w-12 h-12 text-blue-600" />,
+    title: 'IT Infrastructure Setup for New Offices & Relocation',
+    description: ['Manage IT Infrastructure setup for new office spaces or relocation projects, ensuring a seamless transition and operational readiness from day one.',
+    ],
+    icon: <Server className="w-12 h-12 text-blue-600" />,
     benefits: [
       'Reduce operational IT costs',
       'Access to specialized expertise',
@@ -159,7 +141,57 @@ const services = [
       'Incident response and resolution',
       'Regular performance reporting'
     ]
-  }
+  },
+    {
+    id: 'DC-DR',
+    title: 'DC-DR Core Network Solutions',
+    description: ['Design and implement core network solutions for data centers and disaster recovery (DC/DR) to ensure uninterrupted operations and data integrity in case of emergencies.', ],
+    icon: <Shield className="w-12 h-12 text-blue-600" />,
+     benefits: [],
+  features: []
+  },
+  {
+    id: 'WAN',
+    title: 'WAN Infrastructure',
+    description: ['Establish and optimize wide-area networks (WAN) to efficiently connect remote offices, data centers and cloud environments with secure and reliable connections.',],
+    icon: <Network className="w-12 h-12 text-blue-600" />,
+     benefits: [],
+  features: []
+  },
+   {
+    id: 'technical-transfer',
+    title: 'Technical Transfer Services',
+    description: ['Empower your team with hands-on training, knowledge transfer and technical documentation to effectively manage and maintain your IT systems.',],
+    icon: <BookOpen className="w-12 h-12 text-blue-600" />,
+     benefits: [],
+  features: []
+  },
+   {
+    id: 'IaaS',
+    title: 'IaaS (Infrastructure as a Service)',
+    description: ['Leverage scalable cloud-based infrastructure solutions such as virtual machines, storage and networking to host your applications and data without the need for physical hardware.',],
+    icon: <CloudCog className="w-12 h-12 text-blue-600" />,
+     benefits: [],
+  features: []
+  },
+   {
+    id: 'ISP',
+    title: 'ISP (Internet Service Provider) Solutions',
+    description: ['Deliver reliable and high-speed internet connectivity solutions for businesses, with managed services to ensure performance, availability, and security of yout ISP Infrastructure.',],
+    icon: <Globe className="w-12 h-12 text-blue-600" />,
+     benefits: [],
+  features: []
+  },
+
+   {
+    id: 'VPS',
+    title: 'VPS (Virtual Private Server) Solutions',
+    description: ['Provide flexible and isolated virtual private servers, offering businesses the control of a dedicated server with the cost-effectiveness and scalability of a virtualized environment.',],
+    icon: <Cloud className="w-12 h-12 text-blue-600" />,
+     benefits: [],
+  features: []
+  },
+
 ];
 
 const ServicesPage: React.FC = () => {
