@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Award, Layers, Shield } from 'lucide-react';
 
@@ -26,90 +26,403 @@ import Veritas from '../img/partners/Veritas-copy.png';
 import VMware from '../img/partners/VMware-Advanced-150x150.png';
 import zimbra from '../img/partners/zimbra-copy.png';
 
-const logoMap = {
-  'Tech Partner 1': A10,
-  'Tech Partner 2': APC,
-  'Tech Partner 3': Check_point,
-  'Tech Partner 4': Cisco_Gold,
-  'Tech Partner 5': Dell_Platinum,
-  'Tech Partner 6': f5,
-  'Tech Partner 7': Fortinet,
-  'Tech Partner 8': Hewlett_Packard,
-  'Tech Partner 9': imperva,
-  'Tech Partner 10': Infoblox,
-  'Tech Partner 11': Juniper,
-  'Tech Partner 12':  Microsoft,
-  'Tech Partner 13': paloalto ,
-  'Tech Partner 14': sendQuick,
-  'Tech Partner 15': Sophos,
-  'Tech Partner 16': splunk,
-  'Tech Partner 17': Symantec,
-  'Tech Partner 18': Trendmicro,
-  'Tech Partner 19':  VMware,
-  'Tech Partner 20': zimbra,
-  'Tech Partner 21': redhat,
-  'Tech Partner 22': Veritas,
-};
+// const logoMap = {
+//   'Tech Partner 1': A10,
+//   'Tech Partner 2': APC,
+//   'Tech Partner 3': Check_point,
+//   'Tech Partner 4': Cisco_Gold,
+//   'Tech Partner 5': Dell_Platinum,
+//   'Tech Partner 6': f5,
+//   'Tech Partner 7': Fortinet,
+//   'Tech Partner 8': Hewlett_Packard,
+//   'Tech Partner 9': imperva,
+//   'Tech Partner 10': Infoblox,
+//   'Tech Partner 11': Juniper,
+//   'Tech Partner 12':  Microsoft,
+//   'Tech Partner 13': paloalto ,
+//   'Tech Partner 14': sendQuick,
+//   'Tech Partner 15': Sophos,
+//   'Tech Partner 16': splunk,
+//   'Tech Partner 17': Symantec,
+//   'Tech Partner 18': Trendmicro,
+//   'Tech Partner 19':  VMware,
+//   'Tech Partner 20': zimbra,
+//   'Tech Partner 21': redhat,
+//   'Tech Partner 22': Veritas,
+// };
 
-const name = [
-  'A10', 'APC', 'Check-Point', 'Cisco-Gold', 'Dell-Platinum',
-  'f5', 'Fortinet', 'Hewlett-Packard', 'Imperva', 'Infoblox',
-  'Juniper', 'Microsoft', 'Paloalto',  'SendQuick',
-  'Sophos', 'Splunk', 'Symantec', 'Trendmicro','VMware-Advanced',  'zimbra','Veritas',
-  
-];
-const partnershipLevels = [
-  {
-    title: 'Gold Partners',
-    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
-    color: 'bg-amber-100 text-amber-800 border-amber-300'
-  },
-  {
-    title: 'Silver Partners',
-    description: 'Strategic collaborations with companies delivering exceptional solutions and services.',
-    color: 'bg-gray-100 text-gray-800 border-gray-300'
-  },
-  {
-    title: 'Bronze Partners',
-    description: 'Growing relationships with promising technology providers in the integration space.',
-    color: 'bg-orange-100 text-orange-800 border-orange-300'
-  }
-];
+// const name = [
+//   'A10', 'APC', 'Check-Point', 'Cisco-Gold', 'Dell-Platinum',
+//   'f5', 'Fortinet', 'Hewlett-Packard', 'Imperva', 'Infoblox',
+//   'Juniper', 'Microsoft', 'Paloalto',  'SendQuick',
+//   'Sophos', 'Splunk', 'Symantec', 'Trendmicro','VMware-Advanced',  'zimbra','Veritas',
+// ];
+// const partnershipLevels = [
+//   {
+//     title: 'Premier Integrator Partner',
+//     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+//     color: 'bg-amber-100 text-amber-800 border-amber-300'
+//   },
+//   {
+//     title: 'Innovator Partner',
+//     description: 'Strategic collaborations with companies delivering exceptional solutions and services.',
+//     color: 'bg-gray-100 text-gray-800 border-gray-300'
+//   },
+//   {
+//     title: 'Gold Partner',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'Register Partner',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'Register Partner',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'Reseller',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'Advocate',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'Ready',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'T2 Solution Provider',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'Silver Partner',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'Bronze',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+//   {
+//     title: 'Authorized',
+//     description: 'Growing relationships with promising technology providers in the integration space.',
+//     color: 'bg-orange-100 text-orange-800 border-orange-300'
+//   },
+// ];
 
 // Generate 20 sample partners
-const generatePartners = () => {
-  const partners = [];
-  const categories = ['Cloud', 'Software', 'Hardware', 'Security', 'Data'];
-  const levels = ['Gold', 'Silver', 'Bronze'];
-  
-  for (let i = 1; i <= 20; i++) {
-    const category = categories[Math.floor(Math.random() * categories.length)];
-    const level = levels[Math.floor(Math.random() * levels.length)];
-    
-    partners.push({
-      id: i,
-      name: name[i-1],
-      category,
-      level,
-      logo: logoMap[`Tech Partner ${i}`] || `https://via.placeholder.com/150?text=Partner${i}`,
-      description: `A leading provider of ${category.toLowerCase()} solutions for enterprise businesses.`
-    });
-  }
-  
-  return partners;
-};
 
-const partners = generatePartners();
+const Partners = [
+  {
+    id: 1,
+    name: 'Cisco',
+    level: 'Premier Integrator Partner',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: Cisco_Gold,
+    category: 'Software'
+  },
+   {
+    id: 2,
+    name: 'Palo Alto',
+    level: 'Innovator Partner',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: paloalto,
+    category: 'Software'
+  },
+   {
+    id: 3,
+    name: 'Dell Technologies',
+    level: 'Gold Partner',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: Dell_Platinum,
+    category: 'Software'
+  },
+  {
+    id: 4,
+    name: 'Vmware',
+    level: 'Register Partner',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: VMware,
+    category: 'Software'
+  },
+  {
+    id: 5,
+    name: 'Seiko',
+    level: 'Advocate',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: '',
+    category: 'Software'
+  },
+  {
+    id: 6,
+    name: 'Fortinet',
+    level: 'Advocate',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: Fortinet,
+    category: 'Software'
+  },
+   {
+    id: 7,
+    name: 'Redhat',
+    level: 'Ready',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: redhat,
+    category: 'Software'
+  },
+    {
+    id: 8,
+    name: 'HP',
+    level: 'T2 Solution Provider',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: Hewlett_Packard,
+    category: 'Software'
+  },
+    {
+    id: 9,
+    name: 'IBM',
+    level: 'Silver Partner',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: '',
+    category: 'Software'
+  },
+    {
+    id: 10,
+    name: 'Hillstone',
+    level: 'Bronze',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: '',
+    category: 'Software'
+  }, 
+   {
+    id: 11,
+    name: 'Lenovo',
+    level: 'Authorized',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: '',
+    category: 'Software'
+  },
+   {
+    id: 12,
+    name: 'Veeam',
+    level: 'Reseller',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
+    logo: '',
+    category: 'Software'
+  },
+  {
+    id: 13,
+    name: 'Checkpoint',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: Check_point,
+    category: 'Software'
+  },
+  {
+    id: 14,
+    name: 'Trend Micro',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: Trendmicro,
+    category: 'Software'
+  },
+    {
+    id: 15,
+    name: 'A10',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: A10,
+    category: 'Software'
+  },
+   {
+    id: 16,
+    name: 'F5',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: f5,
+    category: 'Software'
+  },
+  {
+    id: 17,
+    name: 'Juniper',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: Juniper,
+    category: 'Software'
+  },
+  {
+    id: 18,
+    name: 'Arista',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: '',
+    category: 'Software'
+  },
+  {
+    id: 19,
+    name: 'Microsoft',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: Microsoft,
+    category: 'Software'
+  },
+  {
+    id: 20,
+    name: 'Veritas',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: Veritas,
+    category: 'Software'
+  },
+  {
+    id: 21,
+    name: 'Symantec',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: Symantec,
+    category: 'Software'
+  },
+  {
+    id: 22,
+    name: 'Splunk',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: splunk,
+    category: 'Software'
+  },
+  {
+    id: 23,
+    name: 'Sophos',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: Sophos,
+    category: 'Software'
+  },
+  {
+    id: 24,
+    name: 'Send Quick',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: sendQuick,
+    category: 'Software'
+  },
+  {
+    id: 25,
+    name: 'Promox',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: '',
+    category: 'Software'
+  },
+  {
+    id: 26,
+    name: 'Zimbra',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: zimbra,
+    category: 'Software'
+  },
+  {
+    id: 27,
+    name: 'Imperva',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: imperva,
+    category: 'Software'
+  },
+  {
+    id: 28,
+    name: 'APC',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: APC,
+    category: 'Software'
+  },
+   {
+    id: 29,
+    name: 'Vinchin',
+    level: '',
+    description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
+    color: '',
+    logo: '',
+    category: 'Software'
+  },
+
+
+
+]
+
+
+// const generatePartners = () => {
+//   const partners = [];
+//   const categories = ['Cloud', 'Software', 'Hardware', 'Security', 'Data'];
+//   const levels = ['Gold', 'Silver', 'Bronze'];
+  
+//   for (let i = 1; i <= 20; i++) {
+//     const category = categories[Math.floor(Math.random() * categories.length)];
+//     const level = levels[Math.floor(Math.random() * levels.length)];
+    
+//     partners.push({
+//       id: i,
+//       name: name[i-1],
+//       category,
+//       level,
+//       logo: logoMap[`Tech Partner ${i}`] || `https://via.placeholder.com/150?text=Partner${i}`,
+//       description: `A leading provider of ${category.toLowerCase()} solutions for enterprise businesses.`
+//     });
+//   }
+  
+//   return partners;
+// };
+
+// const partners = generatePartners();
 
 const PartnershipsPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [selectedLevel, setSelectedLevel] = React.useState('All');
+  // const [selectedCategory, setSelectedCategory] = React.useState('All');
+  // const [selectedLevel, setSelectedLevel] = React.useState('All');
   
-  const filteredPartners = partners.filter(partner => {
-    const categoryMatch = selectedCategory === 'All' || partner.category === selectedCategory;
-    const levelMatch = selectedLevel === 'All' || partner.level === selectedLevel;
-    return categoryMatch && levelMatch;
-  });
+  // const filteredPartners = partners.filter(partner => {
+  //   const categoryMatch = selectedCategory === 'All' || partner.category === selectedCategory;
+  //   const levelMatch = selectedLevel === 'All' || partner.level === selectedLevel;
+  //   return categoryMatch && levelMatch;
+  // });
   
   return (
     <div>
@@ -237,7 +550,7 @@ const PartnershipsPage: React.FC = () => {
       </section>
       
       {/* Partnership levels */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -290,7 +603,7 @@ const PartnershipsPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* Partner directory */}
       <section className="py-16 bg-white">
@@ -318,7 +631,7 @@ const PartnershipsPage: React.FC = () => {
           </div>
           
           {/* Filter options */}
-          <div className="mb-8 flex flex-wrap justify-center gap-4">
+          {/* <div className="mb-8 flex flex-wrap justify-center gap-4">
             <div>
               <label htmlFor="category-filter" className="block text-sm font-medium text-gray-700 mb-1">
                 Filter by Category
@@ -354,11 +667,11 @@ const PartnershipsPage: React.FC = () => {
                 <option value="Bronze">Bronze</option>
               </select>
             </div>
-          </div>
+          </div> */}
           
           {/* Partners grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {filteredPartners.map((partner) => (
+            {Partners.map((partner) => (
               <motion.div
                 key={partner.id}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -375,11 +688,13 @@ const PartnershipsPage: React.FC = () => {
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
                     <h3 className="text-lg font-semibold text-gray-800">{partner.name}</h3>
-                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                    {/* <span className={`text-xs font-medium px-2 py-1 rounded-full ${
                       partner.level === 'Gold' ? 'bg-amber-100 text-amber-800' :
                       partner.level === 'Silver' ? 'bg-gray-100 text-gray-800' :
                       'bg-orange-100 text-orange-800'
-                    }`}>
+                    }`}> */}
+
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${partner.color}`}>
                       {partner.level}
                     </span>
                   </div>
@@ -392,11 +707,11 @@ const PartnershipsPage: React.FC = () => {
             ))}
           </div>
           
-          {filteredPartners.length === 0 && (
+          {/* {filteredPartners.length === 0 && (
             <div className="text-center py-8">
               <p className="text-gray-600">No partners found with the selected filters.</p>
             </div>
-          )}
+          )} */}
         </div>
       </section>
       

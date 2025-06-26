@@ -20,13 +20,15 @@ import {
   Layers,
   Repeat,
   CircuitBoard,
-  Wifi
+  Wifi,
+  Network,
+  ShieldCheck
 } from 'lucide-react';
 
 const servicesData = [
   {
-    icon: <Layers className="w-6 h-6 text-blue-600" />,
-    title: 'Server Consolidation & Virtualization',
+    icon: <Network className="w-6 h-6 text-blue-600" />,
+    title: 'IT Infrastructure & System Integration Services',
     description: [
       "Server Consolidation/ Virtualization",
       "High Availability/ Redundancy Solutions ",
@@ -35,23 +37,23 @@ const servicesData = [
       "Infrastructure Upgrade & Migration  ",
       "IT Infrastructure Setup for New Offices & Relocation ",
       "DC/DR Core Network Solutions",
-      "WAN infrastructure",
     ]
   },
   {
-    icon: <Repeat className="w-6 h-6 text-blue-600" />,
-    title: 'High Availability & Redundancy Solutions',
+    icon: <Cloud className="w-6 h-6 text-blue-600" />,
+    title: 'Cloud & Managed Services',
     description: [
       "Private and Public Solutions",
       "Hybrid Solutions",
-      "Unified Communications ",
+      "Unified Communications",
       "Telepresence and Teleconference Solutions ",
       "VOIP Solutions ",
+      "Advanced IaaS solution"
     ],
   },
   {
-    icon: <CircuitBoard className="w-6 h-6 text-blue-600" />,
-    title: 'Fault Tolerant Solution & Hyper-Converged Infreastructure​',
+    icon: <Server className="w-6 h-6 text-blue-600" />,
+    title: 'Data Center Services​',
     description: [
       "Active-Active DC/DR Solutions",
       "Storage & Backup Solutions",
@@ -61,8 +63,8 @@ const servicesData = [
     ],
   },
   {
-    icon: <Wifi className="w-6 h-6 text-blue-600" />,
-    title: 'Wireless Infrastructure & BYOD Solutions',
+    icon: <ShieldCheck className="w-6 h-6 text-blue-600" />,
+    title: 'Security & Compliance Services',
     description: [
       "Advanced Persistent Threat Protection ",
       "Compliance Management ",
@@ -73,7 +75,6 @@ const servicesData = [
       "Data Center and Enterprise Security",
       "PCI Compliant Solutions",
       "Next Generation Firewalls ",
-      "Access Control and AAA ",
     ],  }
 ];
 

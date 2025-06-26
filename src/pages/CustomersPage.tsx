@@ -42,87 +42,160 @@ import umtgi from '../img/customers/UMTGI-150x150.png';
 import wilmar from '../img/customers/wilmar-150x150.png';
 import yangon from '../img/customers/Yangon-150x150.png';
 
-const Customerlogo = {
-  'Tech Customer 1': Bloomberg_data,
-  'Tech Customer 2': Community_Partners,
-  'Tech Customer 3': GTL,
-  'Tech Customer 4': GTMH,
-  'Tech Customer 5': Heineken,
-  'Tech Customer 6': Hotel_Max,
-  'Tech Customer 7': IKBZ,
-  'Tech Customer 8': im_net,
-  'Tech Customer 9': Law,
-  'Tech Customer 10': Mandalay_City,
-  'Tech Customer 11': Mandalay_Hill,
-  'Tech Customer 12': MCB,
-  'Tech Customer 13':  MCM,
-  'Tech Customer 14': Ministry ,
-  'Tech Customer 15': MOEE,
-  'Tech Customer 16': Mottama,
-  'Tech Customer 17': MPT,
-  'Tech Customer 18': Myanmar,
-  'Tech Customer 19': Myanmar_red,
-  'Tech Customer 20':  N_Health,
-  'Tech Customer 21': Ooredoo,
-  'Tech Customer 22': Path,
-  'Tech Customer 23': Sakura,
-  'Tech Customer 24': state,
-  'Tech Customer 25': UMG,
-  'Tech Customer 26': umg,
-  'Tech Customer 27': umtgi,
-  'Tech Customer 28': wilmar,
-  'Tech Customer 29': yangon,
-};
+
+const customers = [
+  {
+    id: 1,
+    logo: Bloomberg_data,
+    name: 'Bloomberg_data'
+  },
+  {
+    id: 2,
+    logo: Community_Partners,
+    name: 'Community_Partners'
+  },
+  {
+    id: 3,
+    logo: GTL,
+    name: 'GTL'
+  },
+    {
+    id: 4,
+    logo: GTMH,
+    name: 'GTMH'
+  },
+   {
+    id: 5,
+    logo: Heineken,
+    name: 'Heineken'
+  },
+   {
+    id: 6,
+    logo: Hotel_Max,
+    name: 'Hotel_Max'
+  },
+   {
+    id: 7,
+    logo: IKBZ,
+    name: 'IKBZ'
+  },
+   {
+    id: 8,
+    logo: im_net,
+    name: 'im_net'
+  },
+  {
+    id: 9,
+    logo: Law ,
+    name: 'Law '
+  },
+  {
+    id: 10,
+    logo: Mandalay_City,
+    name: 'Mandalay_City'
+  },
+  {
+    id: 11,
+    logo: Mandalay_Hill,
+    name: 'Mandalay_Hill'
+  },
+  {
+    id: 12,
+    logo: MCB,
+    name: 'MCB'
+  },
+  {
+    id: 13,
+    logo: MCM,
+    name: 'MCM'
+  },
+  {
+    id: 14,
+    logo: Ministry,
+    name: 'Ministry'
+  },
+  {
+    id: 15,
+    logo: MOEE,
+    name: 'MOEE'
+  },
+  {
+    id: 16,
+    logo: Mottama,
+    name: 'Mottama'
+  },
+  {
+    id: 17,
+    logo: MPT,
+    name: 'MPT'
+  },
+  {
+    id: 18,
+    logo: Myanmar,
+    name: 'Myanmar'
+  },
+  {
+    id: 19,
+    logo: Myanmar_red,
+    name: 'Myanmar_red'
+  },
+  {
+    id: 20,
+    logo: N_Health,
+    name: 'N_Health'
+  },
+  {
+    id: 21,
+    logo: Ooredoo,
+    name: 'Ooredoo'
+  },
+  {
+    id: 22,
+    logo: Path,
+    name: 'Path'
+  },
+  {
+    id: 23,
+    logo: Sakura,
+    name: 'Sakura'
+  },
+  {
+    id: 24,
+    logo: state,
+    name: 'state'
+  },
+  {
+    id: 25,
+    logo: UMG,
+    name: 'UMG'
+  },
+  {
+    id: 26,
+    logo: umg,
+    name: 'umg'
+  },
+  {
+    id: 27,
+    logo: umtgi,
+    name: 'umtgi'
+  },
+  {
+    id: 28,
+    logo: wilmar,
+    name: 'wilmar'
+  },
+   {
+    id: 29,
+    logo: yangon,
+    name: 'yangon'
+  },
+
+]
 
 
-const name = [
-  'Bloomberg Data for Health Initiative', 'Community Partners', 'GTL', 'GTMG', 'Heineken', 'Hotel Max',
-  'IKBZ', 'im-net', 'LAW', 'Mandalay City Development', 'Mandalay Hill Resort',
-  'MCB', 'MCM', 'Ministry of transport',  'MOEE',
-  'Mottama', 'MPT', 'Myanmar', 'Myanmar Red Cross',  'N-Health','Ooredoo','Path' , 'Sakura', 'State of Qatar', 'UMG', 'UMG College', 'UMTGI', 'Wilmar', 'Yangon'
-  
-];
-// Generate sample customer data
 
-
-const generateCustomers = () => {
-  const industries = ['Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Technology'];
-  const customers = [];
-  
-  for (let i = 1; i <= 10; i++) {
-    const industry = industries[Math.floor(Math.random() * industries.length)];
-    customers.push({
-      id: i,
-      name: name[i-1],
-      industry,
-      logo: Customerlogo[`Tech Customer ${i}`],
-      description: `A leading ${industry.toLowerCase()} company that has transformed their operations with our integration solutions.`,
-      solution: Math.random() > 0.5 ? 'System Integration' : 'Cloud Solutions',
-      results: [
-        'Reduced operational costs by 30%',
-        'Improved data accuracy by 95%',
-        'Accelerated business processes by 40%'
-      ]
-    });
-  }
-  
-  return customers;
-};
-
-const customers = generateCustomers();
 
 const CustomersPage: React.FC = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState('All');
-  
-  const filteredCustomers = customers.filter(customer => {
-    const industryMatch = selectedIndustry === 'All' || customer.industry === selectedIndustry;
-    const solutionMatch = selectedSolution === 'All' || customer.solution === selectedSolution;
-    return industryMatch && solutionMatch;
-  });
-  
-  const uniqueIndustries = ['All', ...new Set(customers.map(c => c.industry))];
-  const uniqueSolutions = ['All', ...new Set(customers.map(c => c.solution))];
   
   return (
     <div>
@@ -217,7 +290,7 @@ const CustomersPage: React.FC = () => {
       {/* Customer directory */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -239,44 +312,11 @@ const CustomersPage: React.FC = () => {
             </motion.p>
           </div>
           
-          {/* Filter options */}
-          <div className="mb-8 flex flex-wrap justify-center gap-4">
-            <div>
-              <label htmlFor="industry-filter" className="block text-sm font-medium text-gray-700 mb-1">
-                Filter by Industry
-              </label>
-              <select
-                id="industry-filter"
-                value={selectedIndustry}
-                onChange={(e) => setSelectedIndustry(e.target.value)}
-                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              >
-                {uniqueIndustries.map((industry) => (
-                  <option key={industry} value={industry}>{industry}</option>
-                ))}
-              </select>
-            </div>
-            
-            <div>
-              <label htmlFor="solution-filter" className="block text-sm font-medium text-gray-700 mb-1">
-                Filter by Solution
-              </label>
-              <select
-                id="solution-filter"
-                value={selectedSolution}
-                onChange={(e) => setSelectedSolution(e.target.value)}
-                className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              >
-                {uniqueSolutions.map((solution) => (
-                  <option key={solution} value={solution}>{solution}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+
           
           {/* Customers grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCustomers.map((customer) => (
+          <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-8 gap-8">
+            {customers.map((customer) => (
               <motion.div
                 key={customer.id}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -285,7 +325,7 @@ const CustomersPage: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="h-40 flex items-center justify-center p-4 border-b border-gray-200">
+                <div className="h-30 flex items-center justify-center p-4 border-b border-gray-200">
                   <div className="w-30 h-30 flex items-center justify-center overflow-hidden">
                     {customer.logo ? (
                       <img 
@@ -299,49 +339,10 @@ const CustomersPage: React.FC = () => {
                   </div>
                   
                 </div>
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-semibold text-gray-800">{customer.name}</h3>
-                    <span className="text-xs font-medium px-2 py-1 rounded-full bg-blue-100 text-blue-800">
-                      {customer.industry}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 mb-4">{customer.description}</p>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Solution Implemented:</h4>
-                    <span className="inline-block text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded">
-                      {customer.solution}
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Results:</h4>
-                    <ul className="space-y-1">
-                      {customer.results.map((result, index) => (
-                        <li key={index} className="flex items-start text-sm">
-                          <Check className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                          <span className="text-gray-600">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="mt-6">
-                    <Link
-                      to={`/projects`}
-                      className="text-blue-600 font-medium flex items-center hover:text-blue-700 transition-colors"
-                    >
-                      Read Case Study <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
+
               </motion.div>
             ))}
           </div>
-          
-          {filteredCustomers.length === 0 && (
-            <div className="text-center py-8">
-              <p className="text-gray-600">No customers found with the selected filters.</p>
-            </div>
-          )}
         </div>
       </section>
       

@@ -181,9 +181,9 @@ const AboutPage: React.FC = () => {
                 <br /><br />
                 Striving to exceed customers expectations to become selected vendor,
                 then to become preferred vendor.
-                <br /><br />
-                Continually communicate with, and learn from our Customers, in order
-                to improve our products and services.
+                {/* <br /><br /> */}
+                {/* Continually communicate with, and learn from our Customers, in order
+                to improve our products and services. */}
                 <br /><br />
                 Being the partner of choice for a leading system integrator, build
                 and maintain the most innovative, reliable and cost-effective solution.
@@ -207,7 +207,7 @@ const AboutPage: React.FC = () => {
               To achieve year to year sustainable growth through wide
                 portfolio of innovation, customer focused products and services
                 efficiently delivered by a professional and resourced team
-                through active communications.
+                through active communication.
               </p>
             </motion.div>
           </div>
