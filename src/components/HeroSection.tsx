@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
   }, []);
   
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 to-gray-50 pt-24 pb-16 md:pt-32 md:pb-24">
+    <div className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24" style={{ backgroundColor: '#191970' }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
@@ -21,10 +21,10 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-lg"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6 text-white">
               Seamless System Integration Solutions
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-600 mb-8 text-white">
               We connect your critical business systems and optimize workflows 
               with cutting-edge integration technologies. Experience enhanced 
               efficiency and transform your operations.
