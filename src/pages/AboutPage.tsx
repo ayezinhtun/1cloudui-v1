@@ -61,7 +61,7 @@ const AboutPage: React.FC = () => {
   return (
     <div>
       {/* Hero section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 py-24">
+      <section className="relative bg-gradient-to-r from-blue-900 to-blue-800 py-24">
         <div className="container mx-auto px-4 text-center text-white">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -148,7 +148,7 @@ const AboutPage: React.FC = () => {
                 />
               </div>
               
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-lg shadow-lg">
+              <div className="absolute -bottom-6 -right-6 bg-blue-900 text-white p-6 rounded-lg shadow-lg">
                 <p className="text-2xl font-bold">10+</p>
                 <p className="text-sm">Years of Excellence</p>
               </div>
@@ -398,7 +398,7 @@ const AboutPage: React.FC = () => {
       </section>
       
       {/* CTA section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-800 to-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -426,7 +426,7 @@ const AboutPage: React.FC = () => {
           >
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+              className="inline-flex items-center px-8 py-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-blue-900 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
             >
               Contact Us Today
             </a>

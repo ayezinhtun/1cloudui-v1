@@ -64,7 +64,7 @@ const ContactPage: React.FC = () => {
   return (
     <div>
       {/* Hero section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 py-24">
+      <section className="relative bg-gradient-to-r from-blue-800 to-blue-900 py-24">
         <div className="container mx-auto px-4 text-center text-white">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -304,7 +304,7 @@ const ContactPage: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                      className="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
                     >
                       Send Message <Send className="w-4 h-4 ml-2" />
                     </button>
@@ -420,7 +420,7 @@ const ContactPage: React.FC = () => {
       </section>
       
       {/* CTA section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -449,7 +449,7 @@ const ContactPage: React.FC = () => {
           >
             <a
               href="tel:+15551234567"
-              className="inline-flex items-center px-8 py-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+              className="inline-flex items-center px-8 py-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-blue-900 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
             >
               <Phone className="w-5 h-5 mr-2" /> Call Us
             </a>

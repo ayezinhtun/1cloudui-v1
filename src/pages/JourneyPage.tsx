@@ -214,7 +214,7 @@ const JourneyPage: React.FC = () => {
                   className="relative"
                 >
                   {/* Year marker (desktop) */}
-                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-blue-500 text-white font-bold items-center justify-center z-10">
+                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-blue-800 text-white font-bold items-center justify-center z-10">
                     {milestone.year}
                   </div>
                   
@@ -373,7 +373,7 @@ const JourneyPage: React.FC = () => {
       </section>
       
       {/* Looking forward */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div

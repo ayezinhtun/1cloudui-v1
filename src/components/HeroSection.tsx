@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
   }, []);
   
   return (
-    <div className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24" style={{ backgroundColor: '#191970' }}>
+    <div className="relative overflow-hidden bg-gradient-to-r from-blue-100 to-gray-100 pt-24 pb-16 md:pt-32 md:pb-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
@@ -21,10 +21,10 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="max-w-lg"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6 text-white">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
               Seamless System Integration Solutions
             </h1>
-            <p className="text-lg text-gray-600 mb-8 text-white">
+            <p className="text-lg text-gray-600 mb-8">
               We connect your critical business systems and optimize workflows 
               with cutting-edge integration technologies. Experience enhanced 
               efficiency and transform your operations.
@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
                 href="#services"
-                className="inline-flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                className="inline-flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
               >
                 Our Services
               </a>
@@ -54,20 +54,20 @@ const HeroSection: React.FC = () => {
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               {/* Outer circle */}
-              <div className="absolute inset-0 rounded-full border-4 border-blue-200 flex items-center justify-center">
+              <div className="absolute inset-0 rounded-full border-4 border-[#283e80] flex items-center justify-center">
                 {/* System workflow paths */}
                 <svg className="absolute w-full h-full" viewBox="0 0 200 200">
                   <path 
                     d="M100,20 A80,80 0 1,1 20,100" 
                     fill="none" 
-                    stroke="#dbeafe" 
+                    stroke="#8a8fb9" 
                     strokeWidth="4"
                     strokeDasharray="5,5"
                   />
                   <path 
                     d="M100,20 A80,80 0 1,0 180,100" 
                     fill="none" 
-                    stroke="#dbeafe" 
+                    stroke=" #8a8fb9"
                     strokeWidth="4"
                   />
                 </svg>
@@ -81,7 +81,7 @@ const HeroSection: React.FC = () => {
                       cy="50" 
                       r="40" 
                       fill="none" 
-                      stroke="#3b82f6" 
+                      stroke="#6B7280" 
                       strokeWidth="1"
                       initial={{ strokeDasharray: 0, strokeDashoffset: 0 }}
                       animate={{ 
@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
                       animate={{ rotate: 360 }}
                       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                     >
-                      <Cog className="w-16 h-16 text-blue-600" />
+                      <Cog className="w-16 h-16 text-blue-800" />
                     </motion.div>
                     <Workflow className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 text-blue-800" />
                   </div>

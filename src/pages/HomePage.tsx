@@ -127,10 +127,10 @@ const HomePage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg hover:bg-blue-50"
+                className="bg-gray-100 rounded-lg p-8 transition-all hover:shadow-lg hover:bg-blue-50"
               >
-                <div className="p-3 bg-blue-100 rounded-full w-14 h-14 flex items-center justify-center mb-6">
-                  {service.icon}
+                <div className="p-3 bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                 {React.cloneElement(service.icon, { className: "w-10 h-10 text-blue-600" })}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
                 {/* <ul className="list-disc list-inside text-gray-600 space-y-1">
@@ -145,7 +145,7 @@ const HomePage: React.FC = () => {
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
             >
               View All Services
             </Link>
@@ -198,7 +198,7 @@ const HomePage: React.FC = () => {
               <div className="mt-8">
                 <Link
                   to="/about"
-                  className="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                  className="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
                 >
                   Learn More About Us
                 </Link>
@@ -226,7 +226,7 @@ const HomePage: React.FC = () => {
       </section>
       
       {/* Stats section */}
-      <section className="py-16 bg-blue-700 text-white">
+      <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {statsData.map((stat, index) => (
@@ -300,7 +300,7 @@ const HomePage: React.FC = () => {
       </section>
       
       {/* CTA section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -328,7 +328,7 @@ const HomePage: React.FC = () => {
           >
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+              className="inline-flex items-center px-8 py-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-blue-900 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
             >
               Contact Us Today
             </Link>

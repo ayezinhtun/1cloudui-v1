@@ -19,15 +19,15 @@ const Footer: React.FC = () => {
               Transforming businesses through innovative cloud solutions and enterprise-grade IT services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 hover:text-blue-600 transition-colors">
+              <a href="#" className="text-gray-500 hover:text-blue-900 transition-colors">
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a href="#" className="text-gray-500 hover:text-blue-600 transition-colors">
+              <a href="#" className="text-gray-500 hover:text-blue-900 transition-colors">
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-gray-500 hover:text-blue-600 transition-colors">
+              <a href="#" className="text-gray-500 hover:text-blue-900 transition-colors">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </a>
@@ -40,27 +40,27 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/" className="text-gray-600 hover:text-blue-900 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/about" className="text-gray-600 hover:text-blue-900 transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/services" className="text-gray-600 hover:text-blue-900 transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/projects" className="text-gray-600 hover:text-blue-900 transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/contact" className="text-gray-600 hover:text-blue-900 transition-colors">
                   Contact
                 </Link>
               </li>
@@ -73,27 +73,27 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/services" className="text-gray-600 hover:text-blue-900 transition-colors">
                   System Integration
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/services" className="text-gray-600 hover:text-blue-900 transition-colors">
                   Cloud Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/services" className="text-gray-600 hover:text-blue-900 transition-colors">
                   Managed Services
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/services" className="text-gray-600 hover:text-blue-900 transition-colors">
                   IT Consulting
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/services" className="text-gray-600 hover:text-blue-900 transition-colors">
                   Cybersecurity
                 </Link>
               </li>
@@ -106,11 +106,11 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin className="mt-1 mr-2 text-blue-600 flex-shrink-0" size={16} />
+                <MapPin className="mt-1 mr-2 text-blue-900 flex-shrink-0" size={16} />
                 <span className="text-gray-600">Tower A, Room 304, 4th floor, Shew Zabu River View Complex, Strand Road, Ahlone Township, Yangon</span>
               </li>
               <li className="flex items-center">
-                <Phone className="mr-2 text-blue-600 flex-shrink-0" size={16} />
+                <Phone className="mr-2 text-blue-900 flex-shrink-0" size={16} />
                  <span className="text-gray-600">
                     (+95) 9 400 635 977
                   <br />
@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
                 </span>
               </li>
               <li className="flex items-center">
-                <Mail className="mr-2 text-blue-600 flex-shrink-0" size={16} />
+                <Mail className="mr-2 text-blue-900 flex-shrink-0" size={16} />
                   <span className="text-gray-600">
                 sales@1cloudtechnology.com
                 <br />
@@ -134,10 +134,10 @@ const Footer: React.FC = () => {
             &copy; {currentYear} OneCloud Systems Integration. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <Link to="/privacy" className="text-gray-500 hover:text-blue-600 transition-colors text-sm">
+            <Link to="/privacy" className="text-gray-500 hover:text-blue-900 transition-colors text-sm">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-gray-500 hover:text-blue-600 transition-colors text-sm">
+            <Link to="/terms" className="text-gray-500 hover:text-blue-900 transition-colors text-sm">
               Terms of Service
             </Link>
           </div>

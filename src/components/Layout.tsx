@@ -41,19 +41,19 @@ const Layout: React.FC = () => {
           </Link>
           
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className={`text-sm font-medium ${location.pathname === '/' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            <Link to="/" className={`text-sm font-medium ${location.pathname === '/' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Home
             </Link>
-            <Link to="/about" className={`text-sm font-medium ${location.pathname === '/about' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            <Link to="/about" className={`text-sm font-medium ${location.pathname === '/about' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               About
             </Link>
-            <Link to="/partnerships" className={`text-sm font-medium ${location.pathname === '/partnerships' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            <Link to="/partnerships" className={`text-sm font-medium ${location.pathname === '/partnerships' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Partnerships
             </Link>
-            <Link to="/journey" className={`text-sm font-medium ${location.pathname === '/journey' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            <Link to="/journey" className={`text-sm font-medium ${location.pathname === '/journey' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Journey
             </Link>
-            <Link to="/services" className={`text-sm font-medium ${location.pathname === '/services' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            <Link to="/services" className={`text-sm font-medium ${location.pathname === '/services' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Services
             </Link>
             {/* <Link to="/1cloudtechnolory.com" className={`text-sm font-medium ${location.pathname === '/cloud' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
@@ -64,17 +64,17 @@ const Layout: React.FC = () => {
             href="https://1cloudng.com" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+            className="text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors"
           >
             1Cloud NG
           </a>
-            <Link to="/customers" className={`text-sm font-medium ${location.pathname === '/customers' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            <Link to="/customers" className={`text-sm font-medium ${location.pathname === '/customers' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Customers
             </Link>
-            <Link to="/projects" className={`text-sm font-medium ${location.pathname === '/projects' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            <Link to="/projects" className={`text-sm font-medium ${location.pathname === '/projects' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Projects
             </Link>
-            <Link to="/contact" className={`text-sm font-medium ${location.pathname === '/contact' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'} transition-colors`}>
+            <Link to="/contact" className={`text-sm font-medium ${location.pathname === '/contact' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Contact Us
             </Link>
           </nav>
