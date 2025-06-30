@@ -347,7 +347,7 @@ const CustomersPage: React.FC = () => {
       </section>
       
       {/* Testimonials */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -411,10 +411,10 @@ const CustomersPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* Industries we serve */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2

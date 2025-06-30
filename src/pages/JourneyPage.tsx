@@ -72,7 +72,7 @@ const journeyMilestones = [
     description: 'Continuing to expand our global footprint and technological capabilities.',
     icon: <MapPin className="w-6 h-6 text-blue-600" />,
     achievements: [
-      'Planning expansion to 15+ countries',
+      // 'Planning expansion to 15+ countries',
       'Developing next-gen integration technologies',
       'Targeting 500+ enterprise partnerships'
     ]
@@ -273,11 +273,11 @@ const JourneyPage: React.FC = () => {
             </motion.p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-8">
             {[
               { value: '200+', label: 'Enterprise Clients', color: 'from-blue-400 to-blue-600' },
               { value: '150+', label: 'Team Members', color: 'from-green-400 to-green-600' },
-              { value: '15+', label: 'Countries Served', color: 'from-purple-400 to-purple-600' },
+              // { value: '15+', label: 'Countries Served', color: 'from-purple-400 to-purple-600' },
               { value: '300%', label: 'Revenue Growth', color: 'from-amber-400 to-amber-600' }
             ].map((stat, index) => (
               <motion.div
@@ -312,9 +312,9 @@ const JourneyPage: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
             >
-              Our Global Presence
+              Offices and Locations
             </motion.h2>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -322,7 +322,7 @@ const JourneyPage: React.FC = () => {
               className="text-lg text-gray-600 max-w-2xl mx-auto"
             >
               From our humble beginnings to our current international footprint.
-            </motion.p>
+            </motion.p> */}
           </div>
           
           <motion.div

@@ -348,7 +348,7 @@ const AboutPage: React.FC = () => {
             </motion.p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -379,20 +379,7 @@ const AboutPage: React.FC = () => {
               <p className="text-sm text-gray-500">2019-2024</p>
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gray-50 p-8 rounded-lg"
-            >
-              <TrendingUp className="w-12 h-12 text-blue-600 mb-6" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Business Growth</h3>
-              <p className="text-gray-600 mb-4">
-                Expanded operations to 15 countries and achieved 300% revenue growth in the last five years.
-              </p>
-              <p className="text-sm text-gray-500">2019-2024</p>
-            </motion.div>
+          
           </div>
         </div>
       </section>

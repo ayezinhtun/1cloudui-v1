@@ -82,7 +82,7 @@ const statsData = [
   { value: '20+', label: 'Technology Partners' },
   { value: '100+', label: 'Projects Completed' },
   { value: '10+', label: 'Years Experience' },
-  { value: '15+', label: 'Countries Served' }
+  // { value: '15+', label: 'Countries Served' }
 ];
 
 const clientLogos = [
@@ -228,7 +228,7 @@ const HomePage: React.FC = () => {
       {/* Stats section */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {statsData.map((stat, index) => (
               <motion.div
                 key={index}

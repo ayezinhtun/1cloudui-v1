@@ -440,7 +440,7 @@ const ServicesPage: React.FC = () => {
       </section>
       
       {/* Case studies teaser */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -526,7 +526,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
+       */}
       {/* CTA section */}
       <section className="py-16 bg-gradient-to-r from-blue-800 to-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
