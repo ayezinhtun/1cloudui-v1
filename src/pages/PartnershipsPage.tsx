@@ -170,7 +170,7 @@ const Partners = [
   {
     id: 5,
     name: 'Seiko',
-    level: 'Advocate',
+    level: 'Reseller',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: 'bg-orange-100 text-orange-800 border-orange-300',
     logo: Seiko,
@@ -242,9 +242,9 @@ const Partners = [
   {
     id: 13,
     name: 'Checkpoint',
-    level: '',
+    level: 'Advance',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
-    color: '',
+    color: 'bg-orange-100 text-orange-800 border-orange-300',
     logo: Check_point,
     category: 'Software'
   },
@@ -706,7 +706,7 @@ const PartnershipsPage: React.FC = () => {
                       {partner.level}
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 mb-4">{partner.description}</p>
+                  {/* <p className="text-sm text-gray-600 mb-4">{partner.description}</p> */}
                   <span className="inline-block text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded">
                     {partner.category}
                   </span>
