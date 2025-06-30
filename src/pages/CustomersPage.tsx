@@ -41,6 +41,15 @@ import umg from '../img/customers/umg-college-150x150.png';
 import umtgi from '../img/customers/UMTGI-150x150.png';
 import wilmar from '../img/customers/wilmar-150x150.png';
 import yangon from '../img/customers/Yangon-150x150.png';
+import Schindler from '../img/customers/Schindler.png';
+import Yoma from '../img/customers/Yoma_bank.png';
+import PTTEP from '../img/customers/PTTEP.png';
+import MMIX from '../img/customers/MMIX.png';
+import MMCB from '../img/customers/MMCB.png';
+import skynet from '../img/customers/skynet.jpg';
+import IQNet from '../img/customers/IQNet.jpg';
+import PWC from '../img/customers/PWC.png';
+import Picture from '../img/customers/Picture10.png';
 
 
 const customers = [
@@ -189,6 +198,52 @@ const customers = [
     logo: yangon,
     name: 'yangon'
   },
+    {
+    id: 30,
+    logo: Schindler,
+    name: 'Schindler'
+  },
+   {
+    id: 31,
+    logo: Yoma,
+    name: 'Yoma'
+  },
+  {
+    id: 32,
+    logo: PTTEP,
+    name: 'PTTEP'
+  },
+  {
+    id: 33,
+    logo: MMIX,
+    name: 'MMIX'
+  },
+  {
+    id: 34,
+    logo: MMCB,
+    name: 'MMCB'
+  },
+  {
+    id: 35,
+    logo: skynet,
+    name: 'skynet'
+  },
+  {
+    id: 36,
+    logo: IQNet,
+    name: 'IQNet'
+  },
+   {
+    id: 37,
+    logo: PWC,
+    name: 'PWC'
+  },
+    {
+    id: 38,
+    logo: Picture,
+    name: 'Customer'
+  },
+
 
 ]
 
@@ -286,6 +341,7 @@ const CustomersPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       
       {/* Customer directory */}
       <section className="py-16 bg-gray-50">
@@ -316,33 +372,44 @@ const CustomersPage: React.FC = () => {
           
           {/* Customers grid */}
           <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-8 gap-8">
-            {customers.map((customer) => (
-              <motion.div
-                key={customer.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="h-30 flex items-center justify-center p-4 border-b border-gray-200">
-                  <div className="w-30 h-30 flex items-center justify-center overflow-hidden">
-                    {customer.logo ? (
-                      <img 
-                        src={customer.logo} 
-                        alt={`${customer.name} logo`} 
-                        className="w-full h-full object-contain"
-                      />
-                    ) : (
-                      <span className="text-gray-500 font-semibold">Logo {customer.id}</span>
-                    )}
-                  </div>
-                  
-                </div>
+                {customers.map((customer, index) => {
+                  // For the first logo in the last 6, insert an empty div BEFORE it to push it to col 2
+                  const isFirstOfLastSix = index === customers.length - 6;
 
-              </motion.div>
-            ))}
+                  return (
+                    <React.Fragment key={customer.id}>
+                      {isFirstOfLastSix && (
+                        // Empty div to create a blank first column in that row (no size or shadow)
+                        <div className="hidden md:block lg:block" />
+                      )}
+
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                      >
+                        <div className="h-30 flex items-center justify-center p-4 border-b border-gray-200">
+                          <div className="w-40 h-20 flex items-center justify-center overflow-hidden">
+                            {customer.logo ? (
+                              <img 
+                                src={customer.logo} 
+                                alt={`${customer.name} logo`} 
+                                className="object-contain w-full h-full"
+                              />
+                            ) : (
+                              <span className="text-gray-500 font-semibold">Logo {customer.id}</span>
+                            )}
+                          </div>
+                        </div>
+                      </motion.div>
+                    </React.Fragment>
+                  );
+                })}
           </div>
+
+          
         </div>
       </section>
       

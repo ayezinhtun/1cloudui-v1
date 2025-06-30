@@ -25,6 +25,14 @@ import Trendmicro from '../img/partners/Trendmicro-copy.png';
 import Veritas from '../img/partners/Veritas-copy.png';
 import VMware from '../img/partners/VMware-Advanced-150x150.png';
 import zimbra from '../img/partners/zimbra-copy.png';
+import Seiko from '../img/partners/seiko.png';
+import IBM from '../img/partners/IBM.png';
+import Hillstone from '../img/partners/hillstone.png';
+import lenovo from '../img/partners/lenovo.png';
+import veeam from '../img/partners/veeam.jpg';
+import Arista from '../img/partners/arista.png';
+import Promox from '../img/partners/promox.png';
+import Vinchin from '../img/partners/vinchin.png';
 
 // const logoMap = {
 //   'Tech Partner 1': A10,
@@ -165,7 +173,7 @@ const Partners = [
     level: 'Advocate',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: 'bg-orange-100 text-orange-800 border-orange-300',
-    logo: '',
+    logo: Seiko,
     category: 'Software'
   },
   {
@@ -201,7 +209,7 @@ const Partners = [
     level: 'Silver Partner',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: 'bg-orange-100 text-orange-800 border-orange-300',
-    logo: '',
+    logo: IBM,
     category: 'Software'
   },
     {
@@ -210,7 +218,7 @@ const Partners = [
     level: 'Bronze',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: 'bg-orange-100 text-orange-800 border-orange-300',
-    logo: '',
+    logo: Hillstone,
     category: 'Software'
   }, 
    {
@@ -219,7 +227,7 @@ const Partners = [
     level: 'Authorized',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: 'bg-orange-100 text-orange-800 border-orange-300',
-    logo: '',
+    logo: lenovo,
     category: 'Software'
   },
    {
@@ -228,7 +236,7 @@ const Partners = [
     level: 'Reseller',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: 'bg-orange-100 text-orange-800 border-orange-300',
-    logo: '',
+    logo: veeam,
     category: 'Software'
   },
   {
@@ -282,7 +290,7 @@ const Partners = [
     level: '',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: '',
-    logo: '',
+    logo: Arista,
     category: 'Software'
   },
   {
@@ -345,7 +353,7 @@ const Partners = [
     level: '',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: '',
-    logo: '',
+    logo: Promox,
     category: 'Software'
   },
   {
@@ -381,7 +389,7 @@ const Partners = [
     level: '',
     description: 'Our highest level of partnership, representing the deepest technical expertise and business relationship.',
     color: '',
-    logo: '',
+    logo: Vinchin,
     category: 'Software'
   },
 
