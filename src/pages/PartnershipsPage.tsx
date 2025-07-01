@@ -9,7 +9,7 @@ import Check_point from '../img/partners/Check-Point-copy.png';
 import Cisco_Gold from '../img/partners/Cisco-Gold-150x150.png';
 import Dell_Platinum from '../img/partners/Dell-Platinum-150x150.png';
 import f5 from '../img/partners/f5.png';
-import Fortinet from '../img/partners/fortinet.png';
+import Fortinet from '../img/partners/Fortinet.png';
 import Hewlett_Packard from '../img/partners/Hewlett-Packard.png';
 import imperva from '../img/partners/imperva.jpg';
 import Infoblox from '../img/partners/Infoblox-copy.png';
