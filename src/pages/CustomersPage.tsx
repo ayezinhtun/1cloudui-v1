@@ -344,7 +344,8 @@ const CustomersPage: React.FC = () => {
 
       
       {/* Customer directory */}
-      <section className="py-16 bg-gray-50">
+      
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <motion.h2
@@ -370,16 +371,13 @@ const CustomersPage: React.FC = () => {
           
 
           
-          {/* Customers grid */}
           <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-8 gap-8">
                 {customers.map((customer, index) => {
-                  // For the first logo in the last 6, insert an empty div BEFORE it to push it to col 2
                   const isFirstOfLastSix = index === customers.length - 6;
 
                   return (
                     <React.Fragment key={customer.id}>
                       {isFirstOfLastSix && (
-                        // Empty div to create a blank first column in that row (no size or shadow)
                         <div className="hidden md:block lg:block" />
                       )}
 
@@ -411,7 +409,10 @@ const CustomersPage: React.FC = () => {
 
           
         </div>
-      </section>
+      </section> */}
+
+
+      
       
       {/* Testimonials */}
       {/* <section className="py-16 bg-white">

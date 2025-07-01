@@ -8,7 +8,7 @@ import JourneyPage from './pages/JourneyPage';
 import ServicesPage from './pages/ServicesPage';
 // import CloudPage from './pages/CloudPage';
 import CustomersPage from './pages/CustomersPage';
-import ProjectsPage from './pages/ProjectsPage';
+// import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         {/* <Route path="1cloudtechnology.com" element={<CloudPage />} /> */}
         <Route path="/customers" element={<CustomersPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        {/* <Route path="/projects" element={<ProjectsPage />} /> */}
         <Route path="/contact" element={<ContactPage />} />
       </Route>
     </Routes>

@@ -11,6 +11,36 @@ import {
   TrendingUp
 } from 'lucide-react';
 
+import A10 from '../img/certificates/A10.png';
+import Arista from '../img/certificates/Arista.png';
+import aws from '../img/certificates/aws.png';
+import Azure from '../img/certificates/Azure.png';
+import CCIE1 from '../img/certificates/CCIE1.png';
+import CCIE2 from '../img/certificates/CCIE2.png';
+import CCNA from '../img/certificates/CCNA.png';
+import CCNA2 from '../img/certificates/CCNA2.png';
+import CDCP from '../img/certificates/CDCP.png';
+import CEH from '../img/certificates/CEH.png';
+import CPSS from '../img/certificates/CPSS.png';
+import Dell from '../img/certificates/Dell.png';
+import dell1 from '../img/certificates/dell1.png';
+import dell2 from '../img/certificates/dell2.png';
+import dell3 from '../img/certificates/dell3.png';
+import DSS from '../img/certificates/DSS.png';
+import fortinet from '../img/certificates/fortinet.png';
+import HP from '../img/certificates/HP.png';
+import IBM from '../img/certificates/IBM.png';
+import ITIL from '../img/certificates/ITIL.png';
+import paloalto from '../img/certificates/paloalto.png';
+import paloalto2 from '../img/certificates/paloalto2.png';
+import PMP from '../img/certificates/PMP.png';
+import redhat1 from '../img/certificates/redhat1.png';
+import redhat2 from '../img/certificates/redhat2.png';
+import vinchin from '../img/certificates/vinchin.png';
+import vmware1 from '../img/certificates/vmware1.png';
+import vmware2 from '../img/certificates/vmware2.png';
+
+
 const AboutPage: React.FC = () => {
   const teamMembers = [
     {
@@ -57,6 +87,123 @@ const AboutPage: React.FC = () => {
       description: 'We work closely with our clients to ensure their success is our success.'
     }
   ];
+
+   const certificates = [
+    {
+      name: 'A10',
+      icon: A10
+    },
+    {
+      name: 'Arista',
+      icon: Arista
+    },
+    {
+      name: 'AWS',
+      icon: aws,
+    },
+    {
+      name: 'Azure',
+      icon: Azure
+    },
+    {
+      name: 'CCIE1',
+      icon: CCIE1
+    },
+    {
+      name: 'CCIE2',
+      icon: CCIE2
+    },
+    {
+      name: 'CCNA',
+      icon: CCNA
+    },
+    {
+      name: 'CCNA2',
+      icon: CCNA2
+    },
+    {
+      name: 'CDCP',
+      icon: CDCP
+    },
+    {
+      name: 'CEH',
+      icon: CEH
+    },
+    {
+      name: 'CPSS',
+      icon: CPSS
+    },
+    {
+      name: 'DEll',
+      icon: Dell
+    },
+    {
+      name: 'dell1',
+      icon: dell1
+    },
+     {
+      name: 'dell2',
+      icon: dell2
+    },
+     {
+      name: 'dell3',
+      icon: dell3
+    },
+     {
+      name: 'DSS',
+      icon: DSS
+    },
+     {
+      name: 'fortinet',
+      icon: fortinet
+    },
+     {
+      name: 'HP',
+      icon: HP
+    },
+     {
+      name: 'IBM',
+      icon: IBM
+    },
+     {
+      name: 'ITIL',
+      icon: ITIL
+    },
+     {
+      name: 'paloalto',
+      icon: paloalto
+    },
+     {
+      name: 'paloalto2',
+      icon: paloalto2
+    },
+     {
+      name: 'PMP',
+      icon: PMP
+    },
+     {
+      name: 'redhat1',
+      icon: redhat1
+    },
+     {
+      name: 'redhat2',
+      icon: redhat2
+    },
+     {
+      name: 'vinchin',
+      icon: vinchin
+    },
+     {
+      name: 'vmware',
+      icon: vmware1
+    },
+     {
+      name: 'vmware2',
+      icon: vmware2
+    },
+  ];
+
+ 
   
   return (
     <div>
@@ -381,6 +528,31 @@ const AboutPage: React.FC = () => {
             
           
           </div>
+        </div>
+      </section>
+      
+       <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Our Certifications</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-7 gap-10">
+            {certificates.map(({ name, icon }) => (
+              <motion.div
+                key={name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-gray-50 rounded-lg flex flex-col items-center text-center shadow hover:shadow-lg"
+              >
+                <img
+                  src={icon}
+                  alt={`${name} logo`}
+                  className="w-full h-full object-contain"
+                />
+              </motion.div>
+            ))}
+          </div>
+
         </div>
       </section>
       

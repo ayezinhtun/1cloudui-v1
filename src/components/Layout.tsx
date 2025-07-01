@@ -71,9 +71,9 @@ const Layout: React.FC = () => {
             <Link to="/customers" className={`text-sm font-medium ${location.pathname === '/customers' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Customers
             </Link>
-            <Link to="/projects" className={`text-sm font-medium ${location.pathname === '/projects' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
+            {/* <Link to="/projects" className={`text-sm font-medium ${location.pathname === '/projects' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Projects
-            </Link>
+            </Link> */}
             <Link to="/contact" className={`text-sm font-medium ${location.pathname === '/contact' ? 'text-blue-900' : 'text-gray-700 hover:text-blue-900'} transition-colors`}>
               Contact Us
             </Link>
