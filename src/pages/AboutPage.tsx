@@ -472,7 +472,7 @@ const AboutPage: React.FC = () => {
       </section> */}
       
       {/* Achievements */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -501,7 +501,7 @@ const AboutPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-gray-50 p-8 rounded-lg"
+              className="bg-white p-8 rounded-lg shadow-md"
             >
               <Award className="w-12 h-12 text-blue-600 mb-6" />
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Industry Recognition</h3>
@@ -516,7 +516,7 @@ const AboutPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gray-50 p-8 rounded-lg"
+              className="bg-white p-8 rounded-lg shadow-md"
             >
               <Star className="w-12 h-12 text-blue-600 mb-6" />
               <h3 className="text-xl font-semibold text-gray-800 mb-3">Client Satisfaction</h3>
@@ -529,7 +529,7 @@ const AboutPage: React.FC = () => {
           
           </div>
         </div>
-      </section>
+      </section> */}
       
        <section className="py-16 bg-white">
         <div className="container mx-auto px-4">

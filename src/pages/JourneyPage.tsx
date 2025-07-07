@@ -276,7 +276,7 @@ const JourneyPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-8">
             {[
               { value: '200+', label: 'Enterprise Clients', color: 'from-blue-400 to-blue-600' },
-              { value: '150+', label: 'Team Members', color: 'from-green-400 to-green-600' },
+              { value: '100+', label: 'Team Members', color: 'from-green-400 to-green-600' },
               // { value: '15+', label: 'Countries Served', color: 'from-purple-400 to-purple-600' },
               { value: '300%', label: 'Revenue Growth', color: 'from-amber-400 to-amber-600' }
             ].map((stat, index) => (
@@ -302,7 +302,7 @@ const JourneyPage: React.FC = () => {
       </section>
       
       {/* Global presence */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -314,7 +314,7 @@ const JourneyPage: React.FC = () => {
             >
               Offices and Locations
             </motion.h2>
-            {/* <motion.p
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -322,7 +322,7 @@ const JourneyPage: React.FC = () => {
               className="text-lg text-gray-600 max-w-2xl mx-auto"
             >
               From our humble beginnings to our current international footprint.
-            </motion.p> */}
+            </motion.p> 
           </div>
           
           <motion.div
@@ -333,7 +333,6 @@ const JourneyPage: React.FC = () => {
             className="relative bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-hidden"
           >
             <div className="w-full" style={{ height: '300px', position: 'relative' }}>
-              {/* World map with location markers would go here */}
               <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.839156725593!2d96.12413437412701!3d16.784676019890238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb09e45dc9c1%3A0xb4d32694065909b3!2sShwe%20Zabu%20River%20View%20Condo!5e0!3m2!1sen!2smm!4v1748331388203!5m2!1sen!2smm"
                   width="100%"
@@ -342,9 +341,9 @@ const JourneyPage: React.FC = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-              {/* <div className="bg-blue-50 rounded-lg w-full h-[400px] flex items-center justify-center">
+               <div className="bg-blue-50 rounded-lg w-full h-[400px] flex items-center justify-center">
                 <p className="text-gray-500">Interactive World Map with Office Locations</p>
-              </div> */}
+              </div> 
             </div>
             
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -370,7 +369,7 @@ const JourneyPage: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
       
       {/* Looking forward */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">

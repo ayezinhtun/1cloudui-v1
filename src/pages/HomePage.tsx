@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import heineken from '../img/customers/Heineken-150x150.png';
-import moee from '../img/customers/MOEE-150x150.png';
-import mandalay_hill_resort from '../img/customers/Mandalay-Hill-Resort-150x150.png';
-import mottama from '../img/customers/Mottama-150x150.png';
 import mpt from '../img/customers/MPT-150x150.png';
+import Pttep from '../img/customers/PTTEP.png';
+import IKBZ from '../img/customers/IKBZ-150x150.png';
+import Nhealth from '../img/customers/N-Health-1-150x150.png';
 import { 
   Server, 
   Cloud, 
@@ -86,8 +86,9 @@ const statsData = [
 ];
 
 const clientLogos = [
-  heineken,moee,mandalay_hill_resort,mottama,mpt,
+  mpt,Pttep,heineken,IKBZ, Nhealth,
 ];
+
 
 const HomePage: React.FC = () => {
   return (
@@ -282,7 +283,7 @@ const HomePage: React.FC = () => {
                   className="flex justify-center hover:grayscale-0 transition-all"
                 >
                   <div className="w-24 h-24 rounded-full flex items-center justify-center">
-                    <img src={logo} alt={`Client ${index + 1}`} />
+                    <img src={logo} alt={`Client ${index + 1}`} className="w-full h-full object-cover" />
                   </div>
                 </motion.div>
               ))}

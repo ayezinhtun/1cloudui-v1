@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
+
 import { 
   MapPin, 
   Phone, 
@@ -32,18 +34,30 @@ const ContactPage: React.FC = () => {
   };
   
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Simple validation
-    if (!formState.name || !formState.email || !formState.message) {
-      setFormError(true);
-      return;
-    }
-    
-    // In a real application, you would send the form data to a server here
-    console.log('Form submitted:', formState);
-    
-    // Reset form and show success message
+  e.preventDefault();
+
+  if (!formState.name || !formState.email || !formState.message) {
+    setFormError(true);
+    return;
+  }
+
+  setFormError(false);
+
+  emailjs.send(
+    'service_fr5io5b', // Service ID
+    'template_08nzifs', // Template ID
+    {
+      name: formState.name,
+      email: formState.email,
+      phone: formState.phone,
+      company: formState.company,
+      service: formState.service,
+      message: formState.message
+    },
+    '2cmY6AGzjzmXbgjOH' // Public key
+  )
+  .then(() => {
+    setFormSubmitted(true);
     setFormState({
       name: '',
       email: '',
@@ -52,14 +66,17 @@ const ContactPage: React.FC = () => {
       service: '',
       message: ''
     });
-    setFormError(false);
-    setFormSubmitted(true);
-    
-    // Hide success message after 5 seconds
+
     setTimeout(() => {
       setFormSubmitted(false);
     }, 5000);
-  };
+  })
+  .catch((error) => {
+    console.error('EmailJS Error:', error);
+    setFormError(true);
+  });
+};
+
   
   return (
     <div>
@@ -131,7 +148,8 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-800 mb-1">Our Location</h3>
-                      <p className="text-gray-600">Tower A, Room 304, 4th floor, Shwe Zabu River View Complex, Strand Road, Ahlone Township, Yangon</p>
+                      <p className="text-gray-600 mb-2">Tower A, Room 304, 4th floor, Shwe Zabu River View Complex, Strand Road, Ahlone Township, Yangon</p>
+                      <p className='text-gray-600'>No: 6/215, Pan Khinn road, Ywar Kauk ward, Pyinmana Township, Naypyidaw</p>
                     </div>
                   </div>
                   
@@ -361,7 +379,7 @@ const ContactPage: React.FC = () => {
       </section>
       
       {/* FAQ section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <motion.h2
@@ -418,7 +436,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
+       */}
       {/* CTA section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">

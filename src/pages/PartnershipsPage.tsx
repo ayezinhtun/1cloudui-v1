@@ -11,7 +11,7 @@ import Dell_Platinum from '../img/partners/Dell-Platinum-150x150.png';
 import f5 from '../img/partners/f5.png';
 import Fortinet from '../img/partners/Fortinet.png';
 import Hewlett_Packard from '../img/partners/Hewlett-Packard.png';
-import imperva from '../img/partners/imperva.jpg';
+import imperva from '../img/partners/imperva.png';
 import Infoblox from '../img/partners/Infoblox-copy.png';
 import Juniper from '../img/partners/Juniper.png';
 import Microsoft from '../img/partners/Microsoft.png';
@@ -29,7 +29,7 @@ import Seiko from '../img/partners/seiko.png';
 import IBM from '../img/partners/IBM.png';
 import Hillstone from '../img/partners/hillstone.png';
 import lenovo from '../img/partners/lenovo.png';
-import veeam from '../img/partners/veeam.jpg';
+import veeam from '../img/partners/veeam.png';
 import Arista from '../img/partners/arista.png';
 import Promox from '../img/partners/promox.png';
 import Vinchin from '../img/partners/vinchin.png';
@@ -486,7 +486,7 @@ const PartnershipsPage: React.FC = () => {
       </section>
       
       {/* Partnership benefits */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -563,7 +563,7 @@ const PartnershipsPage: React.FC = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* Partnership levels */}
       {/* <section className="py-16 bg-gray-50">
@@ -686,7 +686,7 @@ const PartnershipsPage: React.FC = () => {
           </div> */}
           
           {/* Partners grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {Partners.map((partner) => (
               <motion.div
                 key={partner.id}
@@ -696,29 +696,29 @@ const PartnershipsPage: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="h-40 bg-white flex items-center justify-center p-4">
-                <div className="w-40 h-30  flex items-center justify-center overflow-hidden">
+                <div className="h-40 bg-white flex items-center justify-center p-2">
+                <div className="w-50 h-30  flex items-center justify-center overflow-hidden">
                   <img src={partner.logo} alt={`${partner.name} logo`} className="w-full h-full object-contain" />
                 </div>
                 </div>
-                <div className="p-6">
+                {/* <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="text-lg font-semibold text-gray-800">{partner.name}</h3>
-                    {/* <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                     <h3 className="text-lg font-semibold text-gray-800">{partner.name}</h3> 
+                     <span className={`text-xs font-medium px-2 py-1 rounded-full ${
                       partner.level === 'Gold' ? 'bg-amber-100 text-amber-800' :
                       partner.level === 'Silver' ? 'bg-gray-100 text-gray-800' :
                       'bg-orange-100 text-orange-800'
-                    }`}> */}
+                    }`}> 
 
-                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${partner.color}`}>
+                     <span className={`text-xs font-medium px-2 py-1 rounded-full ${partner.color}`}>
                       {partner.level}
-                    </span>
+                    </span> 
                   </div>
-                  {/* <p className="text-sm text-gray-600 mb-4">{partner.description}</p> */}
+                   <p className="text-sm text-gray-600 mb-4">{partner.description}</p> 
                   <span className="inline-block text-xs font-medium bg-blue-100 text-blue-800 px-2 py-1 rounded">
                     {partner.category}
-                  </span>
-                </div>
+                  </span> 
+                </div> */}
               </motion.div>
             ))}
           </div>
