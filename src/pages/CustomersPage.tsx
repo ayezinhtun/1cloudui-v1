@@ -300,28 +300,28 @@ const CustomersPage: React.FC = () => {
       {/* Customer statistics */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { 
                 icon: <Building className="w-10 h-10 text-blue-600" />,
-                value: '200+',
+                value: '100+',
                 label: 'Clients'
               },
-              { 
-                icon: <Globe className="w-10 h-10 text-blue-600" />,
-                value: '15+',
-                label: 'Countries Served'
-              },
+              // { 
+              //   icon: <Globe className="w-10 h-10 text-blue-600" />,
+              //   value: '15+',
+              //   label: 'Countries Served'
+              // },
               { 
                 icon: <Server className="w-10 h-10 text-blue-600" />,
-                value: '500+',
+                value: '100+',
                 label: 'Integration Projects'
               },
-              { 
-                icon: <Star className="w-10 h-10 text-blue-600" />,
-                value: '98%',
-                label: 'Client Satisfaction'
-              }
+              // { 
+              //   icon: <Star className="w-10 h-10 text-blue-600" />,
+              //   value: '98%',
+              //   label: 'Client Satisfaction'
+              // }
             ].map((stat, index) => (
               <motion.div
                 key={index}
