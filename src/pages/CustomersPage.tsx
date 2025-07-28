@@ -304,7 +304,7 @@ const CustomersPage: React.FC = () => {
             {[
               { 
                 icon: <Building className="w-10 h-10 text-blue-600" />,
-                value: '100+',
+                value: '200+',
                 label: 'Clients'
               },
               // { 
